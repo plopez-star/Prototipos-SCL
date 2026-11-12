@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bolsa Laboral · Santa Catalina Labouré</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ac:#f5a623;--acd:#b86e00;--tl:#3aa982;--tld:#0d7c73;--bg:#f2f4f7;--card:#fff;--tx:#3a4250;--hd:#1f2632;--mu:#6f7786;--bd:#e3e6eb;--hv:#f7f8fa;--nav:#4a525f;--navt:#cfd4db;--ok:#23804a;--okb:#e6f5ec;--no:#c43b3b;--nob:#fcebea;--pe:#9a6200;--peb:#fdf3e1;--in:#2b63c4;--inb:#e8effc;--mub:#eceef2;--sh:0 1px 2px rgba(20,30,50,.06);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151a21;--card:#1e252e;--tx:#d6dbe2;--hd:#f1f3f6;--mu:#97a0ad;--bd:#2f3843;--hv:#252d37;--nav:#2a313b;--okb:#163626;--ok:#6fd49a;--nob:#3a1d1d;--no:#f08a8a;--peb:#3a2c12;--pe:#f3c26b;--inb:#1b2a44;--in:#8fb3f5;--mub:#2a313b;--acd:#f5b84a;--tld:#4fd1c5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151a21;--card:#1e252e;--tx:#d6dbe2;--hd:#f1f3f6;--mu:#97a0ad;--bd:#2f3843;--hv:#252d37;--nav:#2a313b;--okb:#163626;--ok:#6fd49a;--nob:#3a1d1d;--no:#f08a8a;--peb:#3a2c12;--pe:#f3c26b;--inb:#1b2a44;--in:#8fb3f5;--mub:#2a313b;--acd:#f5b84a;--tld:#4fd1c5;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:14px/1.55 Poppins,'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--card)}
+.hidden{display:none!important}
+button,input,select,textarea{font:inherit;color:inherit}
+svg.i{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-3px}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+/* ---------- login ---------- */
+.auth{min-height:100vh;display:grid;place-items:center;padding:1.5rem 1rem;background:#2f3640}
+.auth.emp{background:#123b3a}
+.box{background:var(--card);padding:2rem 2rem 1.6rem;border-radius:10px;width:100%;max-width:420px;box-shadow:0 24px 48px rgba(0,0,0,.35)}
+.box .logo{display:flex;justify-content:center;margin-bottom:.4rem}
+.box h1{font-size:1.15rem;font-weight:600;text-align:center;color:var(--hd)}
+.box .sub{text-align:center;color:var(--mu);font-size:.85rem;margin-bottom:.6rem}
+label{display:block;font-size:.78rem;font-weight:500;margin:.85rem 0 .3rem;color:var(--mu)}
+input,select,textarea{width:100%;padding:.5rem .7rem;border:1px solid var(--bd);border-radius:6px;background:var(--card);font-size:.88rem}
+input:disabled{background:var(--hv);color:var(--mu)}
+textarea{resize:vertical}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.5rem 1rem;border:0;border-radius:6px;background:var(--ac);color:#2a1a00;font-weight:500;cursor:pointer;font-size:.86rem;white-space:nowrap}
+.btn:hover{filter:brightness(.95)}
+.btn.w{width:100%;margin-top:1.2rem;padding:.65rem}
+.btn.tl{background:var(--tl);color:#fff}
+.btn.g{background:transparent;border:1px solid var(--bd);color:var(--tx)}.btn.g:hover{background:var(--hv)}
+.btn.sl{background:#6b7584;color:#fff}
+.btn.ok{background:var(--ok);color:#fff}.btn.no{background:var(--no);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.ok,:root:not([data-theme="light"]) .btn.no{color:#10161d}}
+:root[data-theme="dark"] .btn.ok,:root[data-theme="dark"] .btn.no{color:#10161d}
+.btn.sm{padding:.25rem .6rem;font-size:.76rem}
+.ib{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:6px;border:1px solid var(--bd);background:var(--card);cursor:pointer;color:var(--mu)}
+.ib:hover{color:var(--hd);background:var(--hv)}
+.err{color:var(--no);background:var(--nob);padding:.5rem .7rem;border-radius:6px;font-size:.82rem;margin-top:.9rem}
+.lk{color:var(--acd);cursor:pointer;background:none;border:0;text-decoration:underline;font-size:.82rem}
+.emp .lk{color:var(--tld)}
+.foot{text-align:center;margin-top:1rem;display:grid;gap:.35rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 .9rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 .9rem}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:0 .9rem}
+@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+/* ---------- app chrome ---------- */
+.top{background:var(--card);height:60px;padding:0 1.4rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.brand{display:flex;align-items:center;gap:.55rem;color:var(--hd)}
+.brand b{font-size:1.12rem;font-weight:600;letter-spacing:-.01em;line-height:1}
+.brand small{display:block;font-size:.55rem;letter-spacing:.12em;color:var(--mu);text-align:right;margin-top:1px}
+.ui{display:flex;align-items:center;gap:.9rem}
+.av{width:34px;height:34px;border-radius:50%;background:var(--tl);color:#fff;display:grid;place-items:center;font-weight:600;font-size:.85rem}
+.uname{font-size:.84rem;color:var(--mu)}
+.bell{position:relative}
+.bell .dot{position:absolute;top:-4px;right:-5px;background:#e5484d;color:#fff;font-size:.62rem;font-weight:600;min-width:17px;height:17px;border-radius:9px;display:grid;place-items:center;padding:0 4px}
+.np{position:absolute;right:0;top:40px;width:340px;max-width:calc(100vw - 2rem);background:var(--card);border:1px solid var(--bd);border-radius:8px;box-shadow:0 12px 30px rgba(0,0,0,.18);z-index:40;overflow:hidden}
+.np h4{font-size:.82rem;font-weight:600;padding:.7rem .9rem;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;color:var(--hd)}
+.np ul{list-style:none;max-height:360px;overflow:auto}
+.np li{display:flex;gap:.6rem;padding:.7rem .9rem;border-bottom:1px solid var(--bd);cursor:pointer;font-size:.8rem}
+.np li:hover{background:var(--hv)}.np li.un{background:var(--peb)}
+.np li .t{flex:1}.np li .h{color:var(--mu);font-size:.72rem;white-space:nowrap}
+.nav{background:var(--nav);padding:0 1.4rem;display:flex;gap:1.6rem;overflow-x:auto;position:sticky;top:calc(60px + env(safe-area-inset-top,0px));z-index:15}
+.nav button{display:flex;align-items:center;gap:.4rem;padding:.8rem 0;background:none;border:0;border-bottom:3px solid transparent;color:var(--navt);font-size:.82rem;cursor:pointer;white-space:nowrap}
+.nav button:hover{color:#fff}.nav button.on{color:#fff;font-weight:500;border-bottom-color:var(--ac)}
+.ph{background:var(--card);border-bottom:1px solid var(--bd);padding:.9rem 1.4rem}
+.ph h1{font-size:1.15rem;font-weight:500;color:var(--hd);max-width:1240px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+#main{padding:1.4rem;max-width:1240px;margin:0 auto}
+/* ---------- dashboard ---------- */
+.sec{font-size:.95rem;font-weight:500;color:var(--hd);margin:0 0 .8rem}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-bottom:1.6rem}
+.sc{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:1rem 1.1rem;box-shadow:var(--sh)}
+.sc .r1{display:flex;justify-content:space-between;align-items:flex-start}
+.sc .n{font-size:1.9rem;font-weight:400;color:var(--hd);line-height:1.1}
+.sc .l{font-size:.72rem;color:var(--mu);letter-spacing:.04em;font-weight:500}
+.sc .s{font-size:.72rem;color:var(--mu);border-top:1px solid var(--bd);margin-top:.8rem;padding-top:.55rem}
+.sc svg.i{width:26px;height:26px;color:var(--ac);stroke-width:1.7}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:8px;margin-bottom:1.3rem;box-shadow:var(--sh)}
+.ch{padding:.8rem 1.1rem;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.ch h2{font-size:.92rem;font-weight:500;color:var(--hd)}
+.cp{padding:1.1rem}
+.lr{display:flex;align-items:center;gap:1rem;padding:.75rem 1.1rem;border-bottom:1px solid var(--bd)}
+.lr:last-child{border-bottom:0}
+.lg{width:34px;height:26px;border-radius:3px;display:grid;place-items:center;color:#fff;font-size:.68rem;font-weight:600;flex:none}
+.lr .tt{flex:1;font-size:.8rem;text-transform:uppercase;color:var(--tx);min-width:0}
+.lr .tt small{display:block;text-transform:none;color:var(--mu);font-size:.72rem}
+.lr .ac{display:flex;gap:.4rem;align-items:center}
+/* ---------- toolbar + tablas ---------- */
+.tool{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
+.tool select,.tool input{width:auto;background:#6b7584;color:#fff;border:0;font-size:.8rem;padding:.48rem .7rem}
+.tool input::placeholder{color:#e2e6ec}
+.tool .q{min-width:170px;flex:0 1 220px}
+.tool .sz{background:var(--card);color:var(--tx);border:1px solid var(--bd)}
+.tool .dr{display:flex;align-items:center;gap:.35rem;background:#6b7584;color:#fff;border-radius:6px;padding:0 .55rem}
+.tool .dr input{padding:.48rem .1rem;background:transparent;width:128px;color-scheme:dark}
+.tool .sp{flex:1}
+.tool .ib{background:#6b7584;color:#fff;border:0}
+.tbw{background:var(--card);border:1px solid var(--bd);border-radius:8px;box-shadow:var(--sh)}
+.cb{overflow-x:auto}
+table{width:100%;border-collapse:collapse;text-align:left}
+th{padding:.75rem .9rem;font-size:.76rem;font-weight:600;color:var(--hd);border-bottom:1px solid var(--bd);white-space:nowrap}
+td{padding:.7rem .9rem;font-size:.82rem;border-bottom:1px solid var(--bd);vertical-align:middle}
+tbody tr:hover>td{background:var(--hv)}
+td.x{width:28px;padding-right:0}
+.xp{background:none;border:0;cursor:pointer;color:var(--mu);display:grid;place-items:center}
+.xp svg{transition:transform .15s}.xp.on svg{transform:rotate(90deg)}
+tr.dt>td{background:var(--hv);padding:1rem 1.2rem 1.1rem 2.6rem}
+tr.dt:hover>td{background:var(--hv)}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem 1.4rem;font-size:.8rem}
+.kv span{display:block;color:var(--mu);font-size:.72rem}
+.em{text-align:center;color:var(--mu);padding:1.6rem}
+.nw{white-space:nowrap}.mu{color:var(--mu);font-size:.76rem}.trunc{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pg{display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem;font-size:.78rem;color:var(--mu);gap:1rem;flex-wrap:wrap}
+.pg div{display:flex;gap:.25rem}
+.pg button{min-width:30px;height:30px;border:1px solid var(--bd);background:var(--card);border-radius:4px;cursor:pointer;color:var(--tx)}
+.pg button.on{background:var(--nav);color:#fff;border-color:var(--nav)}
+.pg button:disabled{opacity:.4;cursor:default}
+/* ---------- estados ---------- */
+.pill{display:inline-flex;align-items:center;gap:.3rem;font-size:.76rem;font-weight:500;border-radius:5px;padding:.25rem .6rem;border:1px solid transparent;white-space:nowrap}
+select.pill{width:auto;padding:.3rem 1.6rem .3rem .6rem;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 52%,calc(100% - 8px) 52%;background-size:4px 4px;background-repeat:no-repeat}
+.pill.pe{color:var(--pe);background-color:var(--peb);border-color:color-mix(in srgb,var(--pe) 35%,transparent)}
+.pill.ok{color:var(--ok);background-color:var(--okb);border-color:color-mix(in srgb,var(--ok) 35%,transparent)}
+.pill.no{color:var(--no);background-color:var(--nob);border-color:color-mix(in srgb,var(--no) 35%,transparent)}
+.pill.in{color:var(--in);background-color:var(--inb);border-color:color-mix(in srgb,var(--in) 35%,transparent)}
+.pill.mu{color:var(--mu);background-color:var(--mub);border-color:var(--bd)}
+.tag{display:inline-block;font-size:.7rem;padding:.12rem .5rem;border-radius:4px;background:var(--mub);color:var(--mu)}
+.prem{display:inline-block;background:var(--ac);color:#2a1a00;font-size:.62rem;font-weight:600;letter-spacing:.06em;padding:.1rem .5rem;border-radius:4px}
+/* ---------- configuración ---------- */
+.cfg{display:grid;grid-template-columns:300px 1fr;gap:1.3rem;align-items:start}
+@media(max-width:860px){.cfg{grid-template-columns:1fr}}
+.cfl{text-align:center}
+.cfl .lgbox{width:150px;height:84px;margin:0 auto .8rem;display:grid;place-items:center;border-radius:40px;border:1px solid var(--bd);background:#fff;overflow:hidden}
+.cfl .lgbox img{max-width:100%;max-height:100%}
+.cfl h3{font-size:1rem;font-weight:600;color:var(--hd);text-transform:uppercase;line-height:1.3}
+.cfs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--bd);margin-top:1rem}
+.cfs div{padding:.8rem .2rem}.cfs b{display:block;font-size:1.2rem;font-weight:500;color:var(--hd)}.cfs span{font-size:.62rem;letter-spacing:.06em;color:var(--acd);font-weight:600}
+.tabs{display:flex;gap:1.4rem;border-bottom:1px solid var(--bd);padding:0 1.1rem;overflow-x:auto}
+.tabs button{background:none;border:0;padding:.85rem 0;font-size:.82rem;color:var(--mu);border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
+.tabs button.on{color:var(--hd);border-bottom-color:var(--ac);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0}
+.chip{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .3rem .25rem .7rem;border-radius:20px;background:var(--hv);border:1px solid var(--bd);font-size:.8rem}
+.chip button{background:none;border:0;cursor:pointer;color:var(--mu);display:grid;place-items:center;width:20px;height:20px;border-radius:50%}
+.chip button:hover{background:var(--nob);color:var(--no)}
+.sw{display:flex;align-items:flex-start;gap:.6rem;margin:.8rem 0;font-size:.84rem;color:var(--tx);cursor:pointer}
+.sw input{width:auto;margin-top:.25rem}
+.code{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--hv);border:1px solid var(--bd);border-radius:6px;padding:.55rem .7rem;font-size:.8rem;word-break:break-all}
+/* ---------- portal empresa / público ---------- */
+.pt{background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 1.4rem;position:sticky;top:env(safe-area-inset-top,0px);z-index:20;flex-wrap:wrap}
+.pt nav{display:flex;gap:1.6rem}
+.pt nav button{background:none;border:0;font-size:.82rem;color:var(--mu);cursor:pointer;padding:.4rem 0;border-bottom:2px solid transparent}
+.pt nav button.on{color:var(--hd);font-weight:600;border-bottom-color:var(--tl)}
+.hero{background:#2b2f33;color:#fff;text-align:center;padding:4.2rem 1.4rem 4.6rem;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 22px);pointer-events:none}
+.hero h1{font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:600;letter-spacing:.01em;text-transform:uppercase;position:relative}
+.hero p{margin-top:.6rem;font-size:.95rem;opacity:.9;position:relative}
+.hero.pub{background:var(--hc,#0d7c73)}
+.wrap{max-width:980px;margin:-2.4rem auto 2rem;padding:0 1.2rem;position:relative}
+.wrap.flat{margin-top:1.6rem}
+.form .cp{padding:1.4rem 1.6rem 1.6rem}
+.form h3{font-size:.9rem;font-weight:600;color:var(--hd);margin:1.3rem 0 .1rem;padding-top:1rem;border-top:1px solid var(--bd)}
+.form h3:first-child{margin-top:0;padding-top:0;border-top:0}
+.req::after{content:" *";color:var(--no)}
+.note{background:var(--peb);color:var(--pe);border-radius:6px;padding:.7rem .9rem;font-size:.82rem;margin-bottom:1rem}
+.note.ok{background:var(--okb);color:var(--ok)}.note.no{background:var(--nob);color:var(--no)}
+.offers{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.of{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.45rem;box-shadow:var(--sh)}
+.of h3{font-size:.95rem;font-weight:600;color:var(--hd);line-height:1.35}
+.of .co{font-size:.8rem;color:var(--mu)}
+.of .mt{display:flex;flex-wrap:wrap;gap:.35rem}
+.of .bt{margin-top:auto;padding-top:.5rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.ftb{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem}
+.ftb input,.ftb select{width:auto;flex:1 1 180px}
+/* ---------- modal / toast ---------- */
+.mb{position:fixed;inset:0;background:rgba(10,14,20,.55);display:grid;place-items:center;padding:1rem;z-index:60}
+.mc{background:var(--card);border-radius:10px;width:100%;max-width:560px;max-height:90vh;overflow:auto;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.mc.wd{max-width:760px}
+.mc .ch{position:sticky;top:0;background:var(--card);z-index:1}
+.mf{display:flex;justify-content:flex-end;gap:.5rem;margin-top:1.2rem;flex-wrap:wrap}
+#toast{position:fixed;bottom:calc(1rem + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);display:grid;gap:.5rem;z-index:99;width:max-content;max-width:calc(100vw - 2rem)}
+.toast{background:#262d36;color:#fff;padding:.6rem 1rem;border-radius:7px;font-size:.84rem;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.toast.e{background:var(--no);color:#fff}
+.ld{position:fixed;inset:0;background:var(--bg);display:grid;place-content:center;justify-items:center;gap:1rem;z-index:100;color:var(--mu)}
+.spin{width:42px;height:42px;border:4px solid var(--bd);border-top-color:var(--ac);border-radius:50%;animation:s 1s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:3s}.xp svg{transition:none}}
+@media(max-width:640px){.top{padding:0 .9rem}.uname{display:none}#main{padding:1rem .8rem}.nav{padding:0 .9rem;gap:1.1rem}.ph{padding:.8rem .9rem}}
+/* ---------- ajustes de tamaño y legibilidad ---------- */
+body{font-size:15px}
+label{font-size:.82rem}
+input,select,textarea{padding:.62rem .8rem;font-size:.9rem;border-radius:8px}
+input:not([type=checkbox]):not([type=color]):not([type=file]):not([type=hidden]),select{min-height:42px}
+.btn{padding:.6rem 1.15rem;font-size:.88rem;border-radius:8px;min-height:40px}
+.btn.sm{padding:.38rem .8rem;font-size:.8rem;min-height:32px}
+.btn.w{min-height:46px}
+.ib{width:36px;height:36px;border-radius:8px}
+.top{height:64px}
+.nav{top:calc(64px + env(safe-area-inset-top,0px))}
+.nav button{padding:.95rem 0;font-size:.88rem}
+.ph{padding:1.1rem 1.4rem}.ph h1{font-size:1.3rem}
+#main{padding:1.6rem 1.4rem 3rem}
+th{padding:.85rem 1rem;font-size:.78rem}
+td{padding:.85rem 1rem;font-size:.87rem}
+.tool{gap:.6rem}
+.tool select,.tool input{font-size:.84rem;min-height:40px}
+.tool .dr{min-height:40px}.tool .dr input{min-height:0}
+.tool .ib{width:40px;height:40px}
+.pill{font-size:.8rem;padding:.3rem .7rem}
+select.pill{min-height:34px}
+.sc{padding:1.15rem 1.25rem}.sc .n{font-size:2.1rem}
+.card,.tbw,.sc,.of{border-radius:10px}
+.lr{padding:.9rem 1.2rem}.lr .tt{font-size:.84rem}
+.box{max-width:440px;padding:2.2rem 2.2rem 1.8rem}
+.lk{font-size:.86rem}
+.mc{max-width:600px}.mc.wd{max-width:800px}
+.pg button{min-width:34px;height:34px}
+.uname{font-size:.9rem}.np li{font-size:.84rem}
+.toast{font-size:.88rem;padding:.75rem 1.1rem}
+.kv{font-size:.86rem}
+/* ---------- búsqueda de empleo (alumno) ---------- */
+.hero.stu{background:var(--nav)}
+.search .cp{padding:1.25rem 1.35rem}
+.wrap.wide{max-width:1180px}
+.sgrid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:.9rem}
+.chiprow .lk{margin-left:auto}
+.sf label{margin-top:0}
+.iw{position:relative}.iw svg{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);color:var(--mu)}.iw input{padding-left:2.4rem}
+.chiprow{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--bd)}
+.chiprow .sp{flex:1}
+.qchip{border:1px solid var(--bd);background:var(--card);border-radius:999px;padding:.4rem .95rem;font-size:.84rem;cursor:pointer;color:var(--tx)}
+.qchip:hover{background:var(--hv)}.qchip.on{background:var(--nav);border-color:var(--nav);color:#fff}
+.rh{display:flex;align-items:center;gap:.6rem 1.2rem;flex-wrap:wrap;margin:1.5rem 0 .9rem;font-size:.9rem;color:var(--mu)}
+.rh b{color:var(--hd);font-weight:600}.rh .sw{margin:0;font-size:.86rem}.rh select{width:auto;margin-left:auto}
+.oh{display:flex;gap:.8rem;align-items:flex-start}.oh .lg{width:42px;height:42px;border-radius:8px;font-size:.8rem}
+.of{padding:1.2rem 1.25rem;gap:.75rem}
+.of h3{font-size:1rem}
+.of .meta{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;font-size:.82rem;color:var(--mu)}
+.of .bt b{font-weight:600;color:var(--hd)}
+.tag{font-size:.74rem;padding:.18rem .6rem}
+.tag.t1{background:var(--inb);color:var(--in)}
+.of .late{color:var(--no)}
+@media(max-width:900px){.sgrid{grid-template-columns:1fr 1fr}.sgrid .k{grid-column:1/-1}}
+@media(max-width:640px){.sgrid{grid-template-columns:1fr}.tool>*{flex:1 1 100%}.tool .sp{display:none}.tool .dr input{flex:1;width:auto}.hero{padding:3rem 1rem 3.8rem}.rh select{margin-left:0}}
+/* ---------- CV en archivo ---------- */
+.drop{display:flex;gap:.9rem;align-items:center;border:2px dashed var(--bd);border-radius:10px;padding:1.1rem 1.25rem;margin:.8rem 0 0;cursor:pointer;font-size:.9rem;color:var(--tx)}
+.drop:hover,.drop:focus-within{border-color:var(--tlb);background:var(--hv)}
+.drop svg.i{width:26px;height:26px;color:var(--tlb)}
+.fcard{display:flex;gap:.7rem;align-items:center;border:1px solid var(--bd);border-radius:10px;padding:.85rem 1rem;margin-top:.8rem;flex-wrap:wrap;background:var(--hv)}
+.fcard>svg.i{width:22px;height:22px;color:var(--tlb)}
+.seg2{display:inline-flex;border:1px solid var(--bd);border-radius:8px;overflow:hidden;margin-bottom:1rem}
+.seg2 button{border:0;background:var(--card);padding:.5rem 1rem;cursor:pointer;color:var(--mu);font-size:.86rem;display:flex;gap:.4rem;align-items:center}
+.seg2 button+button{border-left:1px solid var(--bd)}
+.seg2 button.on{background:var(--nav);color:#fff}
+/* ---------- contraste y tema ---------- */
+:root{--acd:#8a5200;--tlb:#0d7c73}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--acd:#f5b84a;--tlb:#14958a}}
+:root[data-theme="dark"]{--acd:#f5b84a;--tlb:#14958a}
+.btn.tl{background:var(--tlb);color:#fff}
+.av{background:var(--tlb)}
+.bell .dot{background:#d22d33}
+.toast.e{background:#b42f2f;color:#fff}
+.tool select option,.ftb select option,select.pill option,select option{color:var(--tx);background:var(--card)}
+.tool input[type=date]{color:#fff}
+.hero p,.hero h1{color:#fff}
+.pt nav button{color:var(--mu)}.pt nav button:hover{color:var(--hd)}
+.np h4,.ch h2,.sec,.of h3,.cfl h3{color:var(--hd)}
+.note{line-height:1.5}
+.cnt{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--bd);background:var(--card);color:var(--hd);border-radius:999px;padding:.2rem .7rem;font-size:.84rem;font-weight:600;cursor:pointer}
+.cnt:hover{background:var(--hv)}.cnt.z{color:var(--mu);font-weight:400;cursor:default}
+.cnt .new{background:var(--peb);color:var(--pe);border-radius:999px;padding:0 .45rem;font-size:.72rem;font-weight:600}
+.sub-t{width:100%;border:1px solid var(--bd);border-radius:8px;background:var(--card);overflow:hidden;margin-bottom:.9rem}
+.sub-t td,.sub-t th{background:var(--card)}
+.prog{height:8px;background:var(--bd);border-radius:4px;overflow:hidden;flex:1}.prog b{display:block;height:100%;background:var(--ok)}
+.rr{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 .8rem;position:relative;padding:.2rem 3rem .9rem 0;border-bottom:1px dashed var(--bd);margin-bottom:.4rem}
+.rr .rrx{position:absolute;right:0;top:2.15rem}
+.addr{margin-top:.7rem}
+.pf-top{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+@media(max-width:640px){.rr{grid-template-columns:1fr}.rr>div{grid-column:auto!important}}
+.cvp{background:#fff;color:#2b3340;border:1px solid #e3e6eb;border-radius:8px;overflow:hidden;font-size:13.5px;line-height:1.55;font-family:Poppins,'Segoe UI',Arial,sans-serif;color-scheme:light}
+.cvh{background:#2E3233;color:#fff;padding:22px 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.cvh h2{font-size:23px;font-weight:600;color:#fff;margin:0;line-height:1.2}.cvh .cvr{color:#bfeee9;margin:4px 0 0}.cvh .cvid{font-size:12px;color:#bfeee9;text-align:right}
+.cvb{display:grid;grid-template-columns:230px 1fr}
+.cvb aside{background:#f2f7f7;padding:18px 20px;border-right:1px solid #dbe9e7}
+.cvb .cvm{padding:18px 24px}
+.cvp h4{font-size:12.5px;font-weight:600;color:#00897d;margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid #cde8e4}
+.cvp aside h4:first-child,.cvp .cvm h4:first-child{margin-top:0}
+.cvp p{margin:2px 0;color:#2b3340}.cvp aside p{color:#3a4250;word-break:break-word}
+.cvi{margin-bottom:10px}.cvt{display:flex;justify-content:space-between;gap:12px}.cvt b{font-weight:600;color:#1f2632}.cvt span{color:#5f6775;font-size:12px;white-space:nowrap}
+.cvi p{color:#4a5260}.cvi .cvd{color:#3a4250;margin-top:2px}
+.cvsk{list-style:none;display:flex;flex-wrap:wrap;gap:5px;margin:0;padding:0}.cvsk li{background:#fff;border:1px solid #bfe6e1;color:#006b62;border-radius:4px;padding:2px 8px;font-size:12px}
+.cvp .cvx{color:#8a919c;font-style:italic}
+.cvf{font-size:11.5px;color:#5f6775;padding:9px 24px;border-top:1px solid #e3e6eb;background:#fafbfc}
+@media(max-width:640px){.cvb{grid-template-columns:1fr}.cvb aside{border-right:0;border-bottom:1px solid #dbe9e7}}
+@media print{body *{visibility:hidden!important}.cvp,.cvp *{visibility:visible!important}.cvp{position:absolute;left:0;top:0;width:100%;border:0}}
+/* ---------- temas: oficial turquesa + carbón (alumno/admin/ofertas) y azul (empresas) ---------- */
+:root{--ac:#00C9B9;--acb:#00C9B9;--acbt:#0b2b28;--acd:#00796f;--acl:#dff7f4;--nav:#3a4042;--navu:#00C9B9;--tool:#4d5557;--hero:#2E3233;--authbg:#2E3233;--topbg:#2E3233;--topt:#d3dadc;--topbd:#454c4e;--tlb:#00897d}
+:root[data-brand="emp"]{--ac:#3b82f6;--acb:#1f5fc4;--acbt:#fff;--acd:#1a4fa3;--acl:#e8f0fd;--nav:#1b3d70;--navu:#a9c8ff;--tool:#46628f;--hero:#1b3d70;--authbg:#10284a;--topbg:var(--card);--topt:var(--mu);--topbd:var(--bd);--tlb:#1f5fc4}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--acd:#3fe0d2;--acl:#123532;--nav:#2f3436;--hero:#24292a;--topbg:#24292a;--tool:#454c4e;--authbg:#24292a}
+ :root[data-brand="emp"]:not([data-theme="light"]){--acd:#9cc3ff;--acl:#1a2c4a;--nav:#162f57;--hero:#162f57;--tool:#3c557c;--authbg:#10284a;--topbg:var(--card)}}
+:root[data-theme="dark"]{--acd:#3fe0d2;--acl:#123532;--nav:#2f3436;--hero:#24292a;--topbg:#24292a;--tool:#454c4e;--authbg:#24292a}
+:root[data-brand="emp"][data-theme="dark"]{--acd:#9cc3ff;--acl:#1a2c4a;--nav:#162f57;--hero:#162f57;--tool:#3c557c;--authbg:#10284a;--topbg:var(--card)}
+:focus-visible{outline-color:var(--ac)}
+.btn,.btn.sl,.btn.tl{background:var(--acb);color:var(--acbt)}
+.auth,.auth.emp{background:var(--authbg)}
+.top{background:var(--topbg);border-bottom-color:var(--topbd)}
+.top .uname{color:var(--topt)}
+.top .ib{background:transparent;border-color:var(--topbd);color:var(--topt)}
+.top .ib:hover{background:var(--nav);color:#fff}
+body::before{background:var(--card)}
+:root[data-head="dark"] body::before{background:var(--topbg)}
+.nav{border-top:1px solid var(--topbd)}
+.nav button.on{border-bottom-color:var(--navu);color:#fff}
+.tool select,.tool input,.tool .dr,.tool .ib{background:var(--tool)}
+.hero{background:var(--hero)}
+.prem{background:var(--acl);color:var(--acd)}
+.np li.un{background:var(--acl)}
+.pt nav button.on{border-bottom-color:var(--acb)}
+.tabs button.on{border-bottom-color:var(--ac)}
+.emp .lk{color:var(--acd)}
+.spin{border-top-color:var(--ac)}
+.sc svg.i{color:var(--ac)}
+.av{background:var(--tlb);color:#fff}
+.brand{gap:.75rem}
+.brand .bl{font-size:.72rem;line-height:1.15;font-weight:500;color:var(--topt);border-left:1px solid var(--topbd);padding-left:.75rem}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<div id="modal"></div><div id="toast"></div>
+<div id="load" class="ld hidden"><div class="spin"></div><span>Verificando credenciales…</span></div>
+<script>
+const CVCSS=".cvp{background:#fff;color:#2b3340;border:1px solid #e3e6eb;border-radius:8px;overflow:hidden;font-size:13.5px;line-height:1.55;font-family:Poppins,'Segoe UI',Arial,sans-serif;color-scheme:light}\n.cvh{background:#2E3233;color:#fff;padding:22px 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px}\n.cvh h2{font-size:23px;font-weight:600;color:#fff;margin:0;line-height:1.2}.cvh .cvr{color:#bfeee9;margin:4px 0 0}.cvh .cvid{font-size:12px;color:#bfeee9;text-align:right}\n.cvb{display:grid;grid-template-columns:230px 1fr}\n.cvb aside{background:#f2f7f7;padding:18px 20px;border-right:1px solid #dbe9e7}\n.cvb .cvm{padding:18px 24px}\n.cvp h4{font-size:12.5px;font-weight:600;color:#00897d;margin:16px 0 6px;padding-bottom:4px;border-bottom:1px solid #cde8e4}\n.cvp aside h4:first-child,.cvp .cvm h4:first-child{margin-top:0}\n.cvp p{margin:2px 0;color:#2b3340}.cvp aside p{color:#3a4250;word-break:break-word}\n.cvi{margin-bottom:10px}.cvt{display:flex;justify-content:space-between;gap:12px}.cvt b{font-weight:600;color:#1f2632}.cvt span{color:#5f6775;font-size:12px;white-space:nowrap}\n.cvi p{color:#4a5260}.cvi .cvd{color:#3a4250;margin-top:2px}\n.cvsk{list-style:none;display:flex;flex-wrap:wrap;gap:5px;margin:0;padding:0}.cvsk li{background:#fff;border:1px solid #bfe6e1;color:#006b62;border-radius:4px;padding:2px 8px;font-size:12px}\n.cvp .cvx{color:#8a919c;font-style:italic}\n.cvf{font-size:11.5px;color:#5f6775;padding:9px 24px;border-top:1px solid #e3e6eb;background:#fafbfc}\n@media(max-width:640px){.cvb{grid-template-columns:1fr}.cvb aside{border-right:0;border-bottom:1px solid #dbe9e7}}";
+/* =========================================================
+   Hiring Room Campus — Bolsa laboral Santa Catalina Labouré
+   Portales: Campus (admin + alumno), Empresas, Ofertas públicas
+   ========================================================= */
+const KEY='scl_bolsa_v5',SK='scl_sesion',mem={};
+const ls={get:k=>{try{return localStorage.getItem(k)}catch(e){return mem[k]??null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){mem[k]=v}},del:k=>{try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
+/* la sesión vive por pestaña (sessionStorage): cada pestaña puede tener un usuario distinto y todas comparten los datos */
+const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return mem['s_'+k]??null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){mem['s_'+k]=v}},del:k=>{try{sessionStorage.removeItem(k)}catch(e){delete mem['s_'+k]}}};
+/* CV subido por el alumno: se guarda aparte para no cargar los datos generales */
+const CVPRE='scl_cvfile_',cvKey=id=>CVPRE+id;
+const getFile=id=>{try{return JSON.parse(ls.get(cvKey(id))||'null')}catch(e){return null}};
+const toBlob=u=>{const[h,b]=u.split(','),m=(h.match(/:(.*?);/)||[])[1]||'application/octet-stream',x=atob(b),a=new Uint8Array(x.length);for(let i=0;i<x.length;i++)a[i]=x.charCodeAt(i);return new Blob([a],{type:m})};
+const kb=n=>n>=1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB';
+const pad=n=>String(n).padStart(2,'0');
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+const now=()=>{const d=new Date();return today()+'T'+pad(d.getHours())+':'+pad(d.getMinutes())};
+
+/* ---------- datos de ejemplo ---------- */
+const CAREERS=['Enfermería Técnica','Terapia Física y Rehabilitación','Farmacia Técnica','Laboratorio Clínico y Anatomía Patológica','Administración y Dirección de Negocios','Acompañamiento Terapéutico'];
+function seed(){return{
+cfg:{name:'Escuela Santa Catalina Labouré',legal:'Escuela de Educación Superior Santa Catalina Labouré S.A.C.',email1:'bolsalaboral@santacatalina.edu.pe',email2:'',created:'2026-03-05T14:50',mod:'2026-10-06T12:38',phone1:'+51 989 613 756',phone2:'',phone3:'',ruc:'20601234567',address:'Av. Arequipa 1450, Lima',web:'www.santacatalina.edu.pe',desc:'Institución de educación superior especializada en carreras técnicas de salud y negocios. La bolsa laboral conecta a nuestros estudiantes y egresados con clínicas, boticas, laboratorios, centros terapéuticos y empresas.',logo:'',plan:'PREMIUM',
+ site:{title:'Bolsa Laboral Santa Catalina',welcome:'Prácticas y empleos para estudiantes y egresados de Santa Catalina Labouré.',color:'#2E3233',public:true},
+ ga:'',api:{on:false,key:'scl_live_7f3a91c2d84e4b0f9a6e21c5'},
+ rules:{needCV:true,notifyApps:true,autoCompany:false},
+ careers:CAREERS.slice()},
+users:[
+ {id:1,role:'admin',first:'Gabriela',last:'Ríos',email:'admin@santacatalina.edu.pe',password:'Admin2026'},
+ {id:2,role:'student',first:'Úrsula',last:'Quispe Huamán',code:'SCL-2026-001',dni:'72451836',email:'alumno@santacatalina.edu.pe',password:'Alumno2026',career:'Enfermería Técnica',cycle:'6',phone:'987 654 321',cv:'CV_Ursula_Quispe.pdf',district:'San Juan de Miraflores, Lima',avail:'Inmediata',shift:'Turnos rotativos',
+  about:'Estudiante de último ciclo de Enfermería Técnica con prácticas en tópico y hospitalización. Destaco por el trato humano al paciente, el cumplimiento de los protocolos de bioseguridad y el trabajo en equipo con el personal de salud.',
+  skills:'Control de funciones vitales, Administración de medicamentos, Curaciones, Inyectables, Bioseguridad, Registro en historia clínica, Primeros auxilios',
+  edu:[{inst:'Escuela Santa Catalina Labouré',prog:'Enfermería Técnica',from:'2024',to:'2026',status:'Cursando 6.º ciclo'},{inst:'I.E. N.º 7084 San Juan',prog:'Educación secundaria',from:'2018',to:'2022',status:'Concluido'}],
+  exp:[{place:'Centro de Salud Nueva Esperanza',role:'Practicante de Enfermería – Tópico',from:'Mar 2026',to:'Jul 2026',desc:'Curaciones, administración de inyectables y control de funciones vitales. Apoyo en campañas de vacunación.'},{place:'Policlínico Municipal de San Juan de Miraflores',role:'Prácticas pre-profesionales – Hospitalización',from:'Ago 2025',to:'Dic 2025',desc:'Higiene y confort del paciente, traslado, registro de balance hídrico y apoyo al equipo de enfermería.'}],
+  courses:[{name:'Soporte vital básico',inst:'Escuela Santa Catalina Labouré',year:'2025'},{name:'Bioseguridad y manejo de residuos hospitalarios',inst:'Escuela Santa Catalina Labouré',year:'2025'},{name:'Ofimática básica',inst:'Centro de Cómputo Municipal',year:'2023'}],
+  langs:[{lang:'Español',level:'Nativo'},{lang:'Quechua',level:'Intermedio'},{lang:'Inglés',level:'Básico'}],status:'Activo',date:'2026-03-05',mod:'2026-10-24T10:15'},
+ {id:3,role:'student',first:'Luis',last:'Ramírez Torres',code:'SCL-2026-002',dni:'70983214',email:'luis.ramirez@santacatalina.edu.pe',password:'Alumno2026',career:'Farmacia Técnica',cycle:'5',phone:'956 112 400',cv:'CV_Luis_Ramirez.pdf',district:'San Juan de Lurigancho, Lima',avail:'Inmediata',shift:'Tarde',about:'Técnico en Farmacia con experiencia en dispensación y control de inventario en botica.',skills:'Dispensación, Control de inventario, Atención al cliente, Sistema de ventas',exp:[{place:'Botica Vida Natural E.I.R.L.',role:'Practicante de farmacia',from:'Ene 2026',to:'Jun 2026',desc:'Dispensación y control de fechas de vencimiento.'}],langs:[{lang:'Español',level:'Nativo'}],status:'Activo',date:'2026-03-08',mod:'2026-10-12T09:00'},
+ {id:4,role:'student',first:'María Fernanda',last:'Ccori Mamani',code:'SCL-2026-003',dni:'74120987',email:'maria.ccori@santacatalina.edu.pe',password:'Alumno2026',career:'Laboratorio Clínico y Anatomía Patológica',cycle:'4',phone:'934 221 908',cv:'CV_MariaF_Ccori.pdf',district:'Cercado, Arequipa',avail:'Inmediata',shift:'Mañana',about:'Estudiante de Laboratorio Clínico con práctica en toma de muestras y recepción preanalítica.',skills:'Flebotomía, Rotulado de muestras, Bioseguridad, Centrifugación',courses:[{name:'Flebotomía y toma de muestras',inst:'Escuela Santa Catalina Labouré',year:'2026'}],langs:[{lang:'Español',level:'Nativo'},{lang:'Quechua',level:'Avanzado'}],status:'Activo',date:'2026-04-02',mod:'2026-10-21T16:40'},
+ {id:5,role:'student',first:'Jorge',last:'Salazar Vega',code:'SCL-2026-004',dni:'71563320',email:'jorge.salazar@santacatalina.edu.pe',password:'Alumno2026',career:'Terapia Física y Rehabilitación',cycle:'6',phone:'912 334 556',cv:'CV_Jorge_Salazar.pdf',district:'Surquillo, Lima',avail:'En 15 días',shift:'Mañana',about:'Estudiante de Terapia Física y Rehabilitación con interés en rehabilitación traumatológica.',skills:'Agentes físicos, Electroterapia, Ejercicio terapéutico',langs:[{lang:'Español',level:'Nativo'},{lang:'Inglés',level:'Intermedio'}],status:'Activo',date:'2026-04-10',mod:'2026-10-19T11:20'},
+ {id:6,role:'student',first:'Rosa',last:'Huanca Flores',code:'SCL-2026-005',dni:'73098871',email:'rosa.huanca@santacatalina.edu.pe',password:'Alumno2026',career:'Enfermería Técnica',cycle:'3',phone:'',cv:'',about:'',status:'Activo',date:'2026-05-14',mod:'2026-05-14T08:00'},
+ {id:7,role:'student',first:'Kevin',last:'Paredes Rojas',code:'SCL-2026-006',dni:'75432109',email:'kevin.paredes@santacatalina.edu.pe',password:'Alumno2026',career:'Administración y Dirección de Negocios',cycle:'2',phone:'',cv:'',about:'',status:'Activo',date:'2026-06-01',mod:'2026-06-01T08:00'},
+ {id:8,role:'company',email:'empresa@clinicasantarosa.pe',password:'Empresa2026',companyId:1},
+ {id:9,role:'company',email:'rrhh@familiasana.pe',password:'Empresa2026',companyId:5}],
+companies:[
+ {id:1,name:'Clínica Santa Rosa del Sur S.A.C.',ruc:'20548812301',sector:'Clínica',country:'Perú',city:'Lima',address:'Av. Benavides 3820, Santiago de Surco',contact:'Mario Lozano',phone:'01 448 2200',email:'empresa@clinicasantarosa.pe',web:'',status:'Aprobada',date:'2026-03-20',mod:'2026-10-23T09:10',note:''},
+ {id:2,name:'Botica Vida Natural E.I.R.L.',ruc:'20601177845',sector:'Botica / Farmacia',country:'Perú',city:'Lima',address:'Jr. Las Flores 220, San Juan de Lurigancho',contact:'Hugo Cárdenas',phone:'01 376 9910',email:'seleccion@vidanatural.pe',web:'',status:'Aprobada',date:'2026-04-05',mod:'2026-10-06T15:00',note:''},
+ {id:3,name:'Laboratorio BioAnalítica S.A.C.',ruc:'20455671290',sector:'Laboratorio clínico',country:'Perú',city:'Arequipa',address:'Calle Mercaderes 410, Cercado',contact:'Diana Paz',phone:'054 223 118',email:'talento@bioanalitica.pe',web:'',status:'Aprobada',date:'2026-04-18',mod:'2026-10-22T10:00',note:''},
+ {id:4,name:'Centro de Rehabilitación Movimiento Pleno',ruc:'20609988123',sector:'Rehabilitación',country:'Perú',city:'Lima',address:'Av. Larco 1012, Miraflores',contact:'Óscar Méndez',phone:'01 241 5566',email:'rrhh@movimientopleno.pe',web:'',status:'Aprobada',date:'2026-05-02',mod:'2026-10-20T13:00',note:''},
+ {id:5,name:'Policlínico Familia Sana S.A.C.',ruc:'20612233445',sector:'Policlínico',country:'Perú',city:'Callao',address:'Av. Sáenz Peña 655, Callao',contact:'Milagros Vera',phone:'01 465 7788',email:'rrhh@familiasana.pe',web:'',status:'Pendiente',date:'2026-10-27',mod:'2026-10-27T18:05',note:''},
+ {id:6,name:'Óptica Visión Clara S.A.C.',ruc:'20587766554',sector:'Óptica',country:'Perú',city:'Trujillo',address:'Jr. Pizarro 540, Trujillo',contact:'Raúl Benites',phone:'044 290 300',email:'empleos@visionclara.pe',web:'',status:'Aprobada',date:'2026-06-11',mod:'2026-10-18T09:30',note:''},
+ {id:7,name:'Centro Terapéutico Nuevo Amanecer S.A.C.',ruc:'20490011223',sector:'Salud mental',country:'Perú',city:'Lima',address:'Av. Javier Prado Oeste 1650, San Isidro',contact:'Lucía Ttito',phone:'01 422 7780',email:'talento@nuevoamanecer.pe',web:'',status:'Aprobada',date:'2026-06-25',mod:'2026-10-10T12:00',note:''},
+ {id:8,name:'Farmacias Salud Total Chile SpA',ruc:'76.543.210-K',sector:'Botica / Farmacia',country:'Chile',city:'Arica',address:'Av. 21 de Mayo 340, Arica',contact:'Camila Soto',phone:'+56 58 223 4400',email:'personas@saludtotal.cl',web:'',status:'Rechazada',date:'2026-09-30',mod:'2026-10-02T10:00',note:'No adjuntó datos de contacto verificables.'}],
+jobs:[
+ {id:1,companyId:1,title:'Técnico(a) en Enfermería – Hospitalización',career:'Enfermería Técnica',type:'Empleo',mode:'Presencial',place:'Santiago de Surco, Lima',vacancies:3,salary:1600,deadline:'2026-11-20',desc:'Apoyo en el cuidado integral de pacientes hospitalizados, control de funciones vitales y registro en historia clínica.',reqs:'Técnico titulado o egresado de Enfermería Técnica. Disponibilidad para turnos rotativos.',perks:'Planilla completa, EsSalud, uniformes.',status:'Aprobada',views:48,date:'2026-10-02T09:00',mod:'2026-10-03T10:00',note:''},
+ {id:2,companyId:1,title:'Practicante de Enfermería – Emergencia',career:'Enfermería Técnica',type:'Prácticas pre-profesionales',mode:'Presencial',place:'Santiago de Surco, Lima',vacancies:2,salary:1025,deadline:'2026-11-15',desc:'Prácticas en el área de emergencia apoyando al equipo de enfermería en triaje y procedimientos básicos.',reqs:'Estudiantes de 5.º o 6.º ciclo.',perks:'Subvención económica y constancia de prácticas.',status:'Aprobada',views:31,date:'2026-10-08T11:20',mod:'2026-10-09T08:40',note:''},
+ {id:3,companyId:2,title:'Técnico(a) en Farmacia – Turno tarde',career:'Farmacia Técnica',type:'Empleo',mode:'Presencial',place:'San Juan de Lurigancho, Lima',vacancies:2,salary:1300,deadline:'2026-11-10',desc:'Dispensación de medicamentos, control de inventario y atención al cliente en botica.',reqs:'Egresado de Farmacia Técnica. Manejo de sistema de ventas deseable.',perks:'Bonos por ventas.',status:'Aprobada',views:52,date:'2026-10-05T10:00',mod:'2026-10-06T15:00',note:''},
+ {id:4,companyId:3,title:'Asistente de Laboratorio Clínico – Toma de muestras',career:'Laboratorio Clínico y Anatomía Patológica',type:'Empleo',mode:'Presencial',place:'Cercado, Arequipa',vacancies:1,salary:1500,deadline:'2026-11-30',desc:'Toma de muestras sanguíneas, rotulado, recepción y procesamiento preanalítico.',reqs:'Egresado de Laboratorio Clínico. Experiencia en flebotomía.',perks:'Capacitación continua.',status:'Aprobada',views:27,date:'2026-10-12T09:30',mod:'2026-10-13T09:00',note:''},
+ {id:5,companyId:4,title:'Técnico(a) en Terapia Física',career:'Terapia Física y Rehabilitación',type:'Empleo',mode:'Presencial',place:'Miraflores, Lima',vacancies:1,salary:1700,deadline:'2026-11-25',desc:'Aplicación de agentes físicos y apoyo en terapias de rehabilitación traumatológica y neurológica.',reqs:'Técnico en Terapia Física y Rehabilitación.',perks:'Horario de lunes a sábado.',status:'Aprobada',views:19,date:'2026-10-15T08:00',mod:'2026-10-15T17:00',note:''},
+ {id:6,companyId:6,title:'Asistente administrativo(a) de sede',career:'Administración y Dirección de Negocios',type:'Empleo',mode:'Presencial',place:'Trujillo, La Libertad',vacancies:1,salary:1400,deadline:'2026-11-18',desc:'Apoyo en caja, facturación, control de inventario y atención a proveedores de la sede.',reqs:'Estudiante de último ciclo o egresado de Administración y Dirección de Negocios. Manejo de Excel.',perks:'Horario de lunes a viernes.',status:'Aprobada',views:12,date:'2026-10-18T09:00',mod:'2026-10-18T12:00',note:''},
+ {id:7,companyId:7,title:'Acompañante terapéutico(a) – Niños con TEA',career:'Acompañamiento Terapéutico',type:'Empleo',mode:'Presencial',place:'San Isidro, Lima',vacancies:2,salary:1500,deadline:'2026-11-28',desc:'Acompañamiento personalizado a niños con trastorno del espectro autista en casa y colegio, en coordinación con el equipo terapéutico.',reqs:'Estudiante de último ciclo o egresado de Acompañamiento Terapéutico. Vocación de servicio y paciencia.',perks:'Capacitación continua y supervisión clínica.',status:'Aprobada',views:9,date:'2026-10-10T10:00',mod:'2026-10-10T12:00',note:''},
+ {id:8,companyId:4,title:'Practicante de Terapia Física',career:'Terapia Física y Rehabilitación',type:'Prácticas pre-profesionales',mode:'Presencial',place:'Miraflores, Lima',vacancies:2,salary:0,deadline:'2026-11-10',desc:'Prácticas en el área de terapia física.',reqs:'',perks:'',status:'Rechazada',views:0,date:'2026-10-20T09:00',mod:'2026-10-20T13:00',note:'Falta indicar horario y subvención económica.'},
+ {id:9,companyId:3,title:'Técnico(a) de Laboratorio – Microbiología',career:'Laboratorio Clínico y Anatomía Patológica',type:'Empleo',mode:'Presencial',place:'Cercado, Arequipa',vacancies:1,salary:1600,deadline:'2026-12-05',desc:'Siembra y lectura de cultivos, preparación de medios y control de calidad.',reqs:'Egresado de Laboratorio Clínico con conocimientos en bioseguridad.',perks:'',status:'Pendiente',views:0,date:'2026-10-22T10:00',mod:'2026-10-22T10:00',note:''},
+ {id:10,companyId:2,title:'Practicante de Farmacia – Almacén',career:'Farmacia Técnica',type:'Prácticas pre-profesionales',mode:'Presencial',place:'San Juan de Lurigancho, Lima',vacancies:2,salary:1025,deadline:'2026-11-30',desc:'Recepción de mercadería, control de fechas de vencimiento y ordenamiento de almacén.',reqs:'Estudiantes desde 3.er ciclo.',perks:'Subvención y refrigerio.',status:'Pendiente',views:0,date:'2026-10-26T16:30',mod:'2026-10-26T16:30',note:''},
+ {id:11,companyId:1,title:'Técnico(a) en Enfermería – Centro Quirúrgico',career:'Enfermería Técnica',type:'Empleo',mode:'Presencial',place:'Santiago de Surco, Lima',vacancies:1,salary:1800,deadline:'2026-12-01',desc:'Instrumentación básica, preparación de material estéril y apoyo en sala de operaciones.',reqs:'Experiencia mínima de 6 meses en centro quirúrgico.',perks:'Bono por turno noche.',status:'Pendiente',views:0,date:'2026-10-27T09:15',mod:'2026-10-27T09:15',note:''},
+ {id:12,companyId:5,title:'Técnico(a) en Enfermería – Tópico',career:'Enfermería Técnica',type:'Empleo',mode:'Presencial',place:'Callao',vacancies:2,salary:1350,deadline:'2026-11-29',desc:'Curaciones, inyectables y apoyo en atención de tópico.',reqs:'Técnico en Enfermería.',perks:'',status:'Pendiente',views:0,date:'2026-10-28T08:40',mod:'2026-10-28T08:40',note:''}],
+apps:[
+ {id:1,studentId:2,jobId:1,status:'En revisión',date:'2026-10-20T10:00',mod:'2026-10-22T09:00'},
+ {id:2,studentId:2,jobId:2,status:'Postulado',date:'2026-10-24T10:15',mod:'2026-10-24T10:15'},
+ {id:3,studentId:3,jobId:3,status:'Contratado',date:'2026-10-07T12:00',mod:'2026-10-12T09:00'},
+ {id:4,studentId:4,jobId:4,status:'Entrevista',date:'2026-10-21T16:40',mod:'2026-10-23T11:00'},
+ {id:5,studentId:5,jobId:5,status:'Contratado',date:'2026-10-16T11:20',mod:'2026-10-19T11:20'}],
+notes:[
+ {id:1,text:'<b>Laboratorio BioAnalítica S.A.C.</b> ha solicitado la publicación del aviso [Técnico(a) de Laboratorio – Microbiología – Arequipa]',date:'2026-10-22T10:00',read:true,go:['avisos',9]},
+ {id:2,text:'<b>Botica Vida Natural E.I.R.L.</b> ha solicitado la publicación del aviso [Practicante de Farmacia – Almacén – Lima]',date:'2026-10-26T16:30',read:false,go:['avisos',10]},
+ {id:3,text:'<b>Clínica Santa Rosa del Sur S.A.C.</b> ha solicitado la publicación del aviso [Técnico(a) en Enfermería – Centro Quirúrgico – Lima]',date:'2026-10-27T09:15',read:false,go:['avisos',11]},
+ {id:4,text:'Nueva empresa registrada: <b>Policlínico Familia Sana S.A.C.</b> (pendiente de aprobación)',date:'2026-10-27T18:05',read:false,go:['empresas',5]},
+ {id:5,text:'<b>Policlínico Familia Sana S.A.C.</b> ha solicitado la publicación del aviso [Técnico(a) en Enfermería – Tópico – Callao]',date:'2026-10-28T08:40',read:false,go:['avisos',12]}]
+}}
+if(ls.get(KEY)===null){try{Object.keys(localStorage).filter(k=>k.startsWith(CVPRE)||/^scl_bolsa_v[0-4]$/.test(k)).forEach(k=>localStorage.removeItem(k))}catch(e){}}
+let db;try{db=JSON.parse(ls.get(KEY))}catch(e){}
+function normalize(d){const s=seed();if(!d||typeof d!=='object'||!d.cfg)d=s;
+ ['users','companies','jobs','apps','notes'].forEach(k=>{if(!Array.isArray(d[k]))d[k]=s[k]});
+ d.cfg=Object.assign({},s.cfg,d.cfg);['site','api','rules'].forEach(k=>d.cfg[k]=Object.assign({},s.cfg[k],d.cfg[k]||{}));
+ if(/^#1d6b52$/i.test(d.cfg.site.color||''))d.cfg.site.color='#2E3233';
+ if(!Array.isArray(d.cfg.careers)||!d.cfg.careers.length)d.cfg.careers=s.cfg.careers.slice();
+ d.jobs=d.jobs.filter(j=>j&&d.companies.some(c=>c.id===j.companyId));d.jobs.forEach(j=>{j.views=+j.views||0;j.date=j.date||j.mod||'2026-01-01';j.mod=j.mod||j.date});
+ d.apps=d.apps.filter(a=>a&&d.jobs.some(j=>j.id===a.jobId)&&d.users.some(u=>u.id===a.studentId));
+ d.companies.forEach(c=>{c.mod=c.mod||c.date});d.users.forEach(u=>{if(u.role==='student'){u.mod=u.mod||u.date||'2026-01-01';u.status=u.status||'Activo';
+  ['exp','courses','langs'].forEach(k=>{if(!Array.isArray(u[k]))u[k]=[]});delete u.cv;if(u.cvFile&&ls.get(cvKey(u.id))===null)delete u.cvFile;
+  if(!Array.isArray(u.edu))u.edu=[{inst:'Escuela Santa Catalina Labouré',prog:u.career||'',from:(u.date||'2026').slice(0,4),to:'',status:u.cycle==='Egresado'?'Egresado(a)':'Cursando '+(u.cycle||'')+'.º ciclo'}]}});
+ return d}
+db=normalize(db);
+let saveWarned=false;
+const save=()=>{const t=JSON.stringify(db);try{localStorage.setItem(KEY,t)}catch(e){mem[KEY]=t;if(!saveWarned){saveWarned=true;setTimeout(()=>toast('Este navegador no permite guardar datos; los cambios se perderán al recargar.',1),0)}}};
+save();
+
+/* ---------- utilidades ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nid=a=>Math.max(0,...a.map(x=>x.id))+1;
+const fd=d=>d?d.slice(0,10).split('-').reverse().join('/'):'—';
+const fdt=d=>d?fd(d)+(d.length>10?' '+d.slice(11,16):''):'—';
+const ago=d=>{const m=Math.max(0,Math.round((Date.now()-new Date(d))/6e4));if(m<60)return m<=1?'ahora':m+' min';const h=Math.round(m/60);if(h<24)return h+(h===1?' hora':' horas');const dd=Math.round(h/24);return dd+(dd===1?' día':' días')};
+const co=id=>db.companies.find(c=>c.id===+id);
+const job=id=>db.jobs.find(j=>j.id===+id);
+const usr=id=>db.users.find(u=>u.id===+id);
+const full=u=>u?(u.first+' '+u.last):'—';
+const money=n=>+n?'S/ '+Number(n).toLocaleString('es-PE'):'A tratar';
+const vis=j=>j.status==='Aprobada'&&co(j.companyId)?.status==='Aprobada';
+const city=j=>(j.place||'').split(',').pop().trim();
+const COLORS=['#1f5fbf','#b03a2e','#0d7c73','#7d3c98','#8f5400','#2c7a3f','#525b69'];
+const logo=c=>`<span class="lg" style="background:${COLORS[(c?.id||0)%COLORS.length]}" aria-hidden="true">${esc((c?.name||'?').normalize('NFD').replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase())}</span>`;
+const toast=(m,e)=>{const t=document.createElement('div');t.className='toast'+(e?' e':'');t.textContent=m;$('#toast').append(t);setTimeout(()=>t.remove(),3200)};
+
+/* iconos (trazos estilo feather) */
+const IP={home:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+building:'<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/>',
+mega:'<path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+users:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+award:'<circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>',
+cap:'<path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>',
+cog:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>',
+file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
+user:'<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+eye:'<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>',
+link:'<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',
+edit:'<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>',
+down:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>',
+bell:'<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>',
+chev:'<polyline points="9 18 15 12 9 6"/>',
+cal:'<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+clip:'<path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>',
+out:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>',
+pin:'<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+moon:'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>',
+x:'<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+send:'<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>',
+list:'<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>',
+upload:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>',
+search:'<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>'};
+const ic=(n,t)=>`<svg class="i" viewBox="0 0 24 24" aria-hidden="true">${IP[n]}</svg>`;
+const ibtn=(n,a,id,t,extra='')=>`<button class="ib" data-a="${a}" data-id="${id??''}" title="${t}" aria-label="${t}" ${extra}>${ic(n)}</button>`;
+
+/* marcas */
+const HR=()=>`<span class="brand">${SCL(46)}<span class="bl">Bolsa<br>laboral</span></span>`;
+const LOGO_MARK='M27.00 53.60 L27.00 55.90 L27.80 57.50 L34.80 64.60 L37.70 66.70 L42.00 68.70 L46.20 69.40 L50.10 69.40 L53.50 68.90 L58.30 66.90 L61.30 64.70 L68.80 57.00 L69.40 55.20 L69.00 52.80 L67.30 50.80 L65.50 50.10 L63.70 50.10 L61.60 51.10 L56.10 56.70 L53.40 58.80 L50.50 59.90 L47.80 60.10 L45.60 59.90 L42.60 58.70 L39.10 55.70 L34.40 50.90 L32.90 50.20 L30.70 50.10 L28.70 50.90 L28.00 51.50Z M6.10 23.50 L6.20 31.50 L7.20 35.00 L9.10 38.50 L12.70 42.50 L14.10 43.70 L17.40 45.70 L20.70 46.80 L24.30 47.40 L27.80 47.40 L31.40 46.80 L34.20 45.90 L38.00 43.70 L62.60 19.40 L64.30 18.00 L66.40 17.00 L70.30 16.30 L74.80 17.40 L78.00 19.70 L79.90 22.20 L80.80 24.80 L80.90 29.10 L79.80 32.50 L78.00 34.80 L72.30 40.40 L71.10 42.30 L71.10 45.20 L71.80 46.50 L73.20 47.90 L75.80 48.50 L78.30 47.70 L84.70 41.40 L87.60 37.70 L88.80 35.30 L89.90 32.10 L90.40 28.80 L90.40 25.80 L89.80 22.00 L87.80 17.20 L85.90 14.40 L83.70 12.10 L79.60 9.20 L73.80 7.20 L72.10 7.00 L66.40 7.20 L60.90 9.10 L57.50 11.30 L33.50 35.20 L31.30 36.80 L29.30 37.80 L27.20 38.10 L23.80 38.00 L21.00 36.90 L19.30 35.80 L17.10 33.50 L15.90 31.40 L15.20 29.10 L15.20 25.50 L15.90 23.10 L17.40 20.60 L20.10 18.10 L22.80 16.90 L26.90 16.40 L30.20 17.10 L32.00 18.10 L35.70 20.90 L38.30 20.90 L40.30 19.70 L41.80 17.30 L41.70 14.90 L39.50 12.00 L35.70 9.30 L30.10 7.30 L28.00 7.00 L22.80 7.10 L16.80 9.10 L12.90 11.80 L9.30 15.70 L7.10 19.60Z',LOGO_TXT='M98.81 11.83V11.34Q98.81 11.25 98.88 11.18Q98.95 11.11 99.05 11.11H100.78Q100.88 11.11 100.95 11.18Q101.02 11.25 101.02 11.34V11.71Q101.02 12.61 101.82 13.21Q102.62 13.80 104.00 13.80Q105.19 13.80 105.8 13.29Q106.40 12.79 106.40 11.99Q106.40 11.44 106.07 11.06Q105.74 10.68 105.12 10.37Q104.51 10.06 103.28 9.59Q101.9 9.08 101.04 8.63Q100.18 8.19 99.60 7.41Q99.03 6.64 99.03 5.49Q99.03 3.78 100.28 2.78Q101.52 1.79 103.61 1.79Q105.07 1.79 106.19 2.30Q107.32 2.80 107.94 3.71Q108.56 4.62 108.56 5.81V6.14Q108.56 6.24 108.50 6.30Q108.43 6.37 108.33 6.37H106.58Q106.48 6.37 106.41 6.30Q106.34 6.24 106.34 6.14V5.92Q106.34 5.01 105.59 4.37Q104.84 3.74 103.51 3.74Q102.44 3.74 101.85 4.19Q101.25 4.64 101.25 5.45Q101.25 6.04 101.56 6.41Q101.88 6.78 102.50 7.08Q103.12 7.39 104.43 7.85Q105.81 8.38 106.64 8.81Q107.47 9.24 108.07 10.01Q108.66 10.78 108.66 11.93Q108.66 13.68 107.36 14.72Q106.07 15.75 103.83 15.75Q102.30 15.75 101.17 15.26Q100.04 14.78 99.43 13.90Q98.81 13.02 98.81 11.83ZM118.65 8.79V15.36Q118.65 15.46 118.58 15.53Q118.51 15.6 118.41 15.6H116.62Q116.52 15.6 116.45 15.53Q116.38 15.46 116.38 15.36V14.74Q116.38 14.68 116.34 14.67Q116.31 14.66 116.27 14.70Q115.31 15.75 113.50 15.75Q112.04 15.75 111.09 15.01Q110.14 14.27 110.14 12.81Q110.14 11.29 111.21 10.44Q112.27 9.59 114.20 9.59H116.29Q116.38 9.59 116.38 9.49V9.02Q116.38 8.26 115.94 7.84Q115.49 7.42 114.59 7.42Q113.85 7.42 113.39 7.69Q112.93 7.95 112.82 8.42Q112.76 8.65 112.54 8.61L110.65 8.38Q110.55 8.36 110.48 8.31Q110.42 8.26 110.44 8.19Q110.59 7.00 111.71 6.23Q112.83 5.47 114.53 5.47Q115.76 5.47 116.70 5.90Q117.63 6.33 118.14 7.08Q118.65 7.83 118.65 8.79ZM116.38 12.16V11.25Q116.38 11.15 116.29 11.15H114.65Q113.61 11.15 113.02 11.54Q112.43 11.93 112.43 12.65Q112.43 13.27 112.88 13.62Q113.34 13.96 114.06 13.96Q115.02 13.96 115.70 13.45Q116.38 12.94 116.38 12.16ZM129.16 8.96V15.36Q129.16 15.46 129.09 15.53Q129.02 15.6 128.92 15.6H127.13Q127.03 15.6 126.96 15.53Q126.89 15.46 126.89 15.36V9.43Q126.89 8.54 126.39 7.98Q125.88 7.42 125.04 7.42Q124.20 7.42 123.69 7.97Q123.17 8.52 123.17 9.41V15.36Q123.17 15.46 123.10 15.53Q123.03 15.6 122.94 15.6H121.14Q121.04 15.6 120.98 15.53Q120.91 15.46 120.91 15.36V5.86Q120.91 5.77 120.98 5.70Q121.04 5.63 121.14 5.63H122.94Q123.03 5.63 123.10 5.70Q123.17 5.77 123.17 5.86V6.49Q123.17 6.55 123.21 6.57Q123.25 6.59 123.27 6.53Q124.07 5.47 125.69 5.47Q127.26 5.47 128.21 6.41Q129.16 7.35 129.16 8.96ZM136.57 7.46H134.58Q134.48 7.46 134.48 7.56V12.26Q134.48 13.00 134.80 13.33Q135.12 13.66 135.82 13.66H136.41Q136.51 13.66 136.58 13.73Q136.64 13.80 136.64 13.90V15.36Q136.64 15.58 136.41 15.61L135.40 15.63Q133.86 15.63 133.1 15.11Q132.33 14.58 132.32 13.12V7.56Q132.32 7.46 132.22 7.46H131.11Q131.01 7.46 130.94 7.40Q130.87 7.33 130.87 7.23V5.86Q130.87 5.77 130.94 5.70Q131.01 5.63 131.11 5.63H132.22Q132.32 5.63 132.32 5.53V3.25Q132.32 3.15 132.38 3.09Q132.45 3.02 132.55 3.02H134.25Q134.34 3.02 134.41 3.09Q134.48 3.15 134.48 3.25V5.53Q134.48 5.63 134.58 5.63H136.57Q136.66 5.63 136.73 5.70Q136.80 5.77 136.80 5.86V7.23Q136.80 7.33 136.73 7.40Q136.66 7.46 136.57 7.46ZM146.73 8.79V15.36Q146.73 15.46 146.66 15.53Q146.59 15.6 146.49 15.6H144.70Q144.60 15.6 144.53 15.53Q144.46 15.46 144.46 15.36V14.74Q144.46 14.68 144.42 14.67Q144.39 14.66 144.35 14.70Q143.39 15.75 141.58 15.75Q140.12 15.75 139.17 15.01Q138.22 14.27 138.22 12.81Q138.22 11.29 139.29 10.44Q140.35 9.59 142.28 9.59H144.37Q144.46 9.59 144.46 9.49V9.02Q144.46 8.26 144.02 7.84Q143.57 7.42 142.67 7.42Q141.93 7.42 141.47 7.69Q141.01 7.95 140.9 8.42Q140.84 8.65 140.62 8.61L138.73 8.38Q138.63 8.36 138.56 8.31Q138.50 8.26 138.52 8.19Q138.67 7.00 139.79 6.23Q140.91 5.47 142.61 5.47Q143.84 5.47 144.78 5.90Q145.71 6.33 146.22 7.08Q146.73 7.83 146.73 8.79ZM144.46 12.16V11.25Q144.46 11.15 144.37 11.15H142.73Q141.69 11.15 141.10 11.54Q140.51 11.93 140.51 12.65Q140.51 13.27 140.96 13.62Q141.42 13.96 142.14 13.96Q143.10 13.96 143.78 13.45Q144.46 12.94 144.46 12.16Z M99.09 30.77V25.95Q99.09 24.59 99.69 23.55Q100.30 22.52 101.41 21.95Q102.52 21.39 103.98 21.39Q105.42 21.39 106.54 21.94Q107.65 22.48 108.25 23.48Q108.86 24.47 108.86 25.78Q108.86 25.87 108.79 25.94Q108.72 26.01 108.62 26.01L106.83 26.11Q106.59 26.11 106.59 25.89Q106.59 24.74 105.88 24.04Q105.17 23.34 103.98 23.34Q102.79 23.34 102.07 24.04Q101.35 24.74 101.35 25.89V30.87Q101.35 32.00 102.07 32.70Q102.79 33.40 103.98 33.40Q105.17 33.40 105.88 32.71Q106.59 32.02 106.59 30.87Q106.59 30.65 106.83 30.65L108.62 30.73Q108.72 30.73 108.79 30.79Q108.86 30.85 108.86 30.92Q108.86 32.25 108.25 33.25Q107.65 34.26 106.54 34.81Q105.42 35.35 103.98 35.35Q102.52 35.35 101.41 34.78Q100.30 34.20 99.69 33.17Q99.09 32.13 99.09 30.77ZM118.98 28.39V34.96Q118.98 35.06 118.91 35.13Q118.84 35.2 118.74 35.2H116.95Q116.85 35.2 116.78 35.13Q116.72 35.06 116.72 34.96V34.34Q116.72 34.28 116.68 34.27Q116.64 34.26 116.60 34.30Q115.64 35.35 113.83 35.35Q112.37 35.35 111.42 34.61Q110.47 33.87 110.47 32.41Q110.47 30.89 111.54 30.04Q112.60 29.19 114.53 29.19H116.62Q116.72 29.19 116.72 29.09V28.62Q116.72 27.86 116.27 27.44Q115.82 27.02 114.92 27.02Q114.18 27.02 113.72 27.29Q113.26 27.55 113.15 28.02Q113.09 28.25 112.87 28.21L110.98 27.98Q110.88 27.96 110.82 27.91Q110.75 27.86 110.77 27.79Q110.92 26.60 112.04 25.84Q113.17 25.07 114.86 25.07Q116.09 25.07 117.03 25.50Q117.96 25.93 118.47 26.68Q118.98 27.43 118.98 28.39ZM116.72 31.76V30.85Q116.72 30.75 116.62 30.75H114.98Q113.95 30.75 113.35 31.14Q112.76 31.53 112.76 32.25Q112.76 32.87 113.21 33.22Q113.67 33.56 114.39 33.56Q115.35 33.56 116.03 33.05Q116.72 32.54 116.72 31.76ZM126.29 27.06H124.30Q124.20 27.06 124.20 27.16V31.86Q124.20 32.60 124.52 32.93Q124.85 33.26 125.55 33.26H126.13Q126.23 33.26 126.30 33.33Q126.37 33.40 126.37 33.50V34.96Q126.37 35.18 126.13 35.21L125.12 35.23Q123.58 35.23 122.82 34.71Q122.06 34.18 122.04 32.72V27.16Q122.04 27.06 121.94 27.06H120.83Q120.73 27.06 120.66 27.00Q120.60 26.93 120.60 26.83V25.46Q120.60 25.37 120.66 25.30Q120.73 25.23 120.83 25.23H121.94Q122.04 25.23 122.04 25.13V22.85Q122.04 22.75 122.11 22.69Q122.17 22.62 122.27 22.62H123.97Q124.07 22.62 124.13 22.69Q124.20 22.75 124.20 22.85V25.13Q124.20 25.23 124.30 25.23H126.29Q126.39 25.23 126.46 25.30Q126.52 25.37 126.52 25.46V26.83Q126.52 26.93 126.46 27.00Q126.39 27.06 126.29 27.06ZM136.45 28.39V34.96Q136.45 35.06 136.38 35.13Q136.31 35.2 136.22 35.2H134.42Q134.32 35.2 134.26 35.13Q134.19 35.06 134.19 34.96V34.34Q134.19 34.28 134.15 34.27Q134.11 34.26 134.07 34.30Q133.11 35.35 131.30 35.35Q129.84 35.35 128.89 34.61Q127.95 33.87 127.95 32.41Q127.95 30.89 129.01 30.04Q130.07 29.19 132.00 29.19H134.09Q134.19 29.19 134.19 29.09V28.62Q134.19 27.86 133.74 27.44Q133.29 27.02 132.39 27.02Q131.65 27.02 131.19 27.29Q130.74 27.55 130.62 28.02Q130.56 28.25 130.35 28.21L128.45 27.98Q128.36 27.96 128.29 27.91Q128.22 27.86 128.24 27.79Q128.40 26.60 129.52 25.84Q130.64 25.07 132.33 25.07Q133.56 25.07 134.50 25.50Q135.44 25.93 135.94 26.68Q136.45 27.43 136.45 28.39ZM134.19 31.76V30.85Q134.19 30.75 134.09 30.75H132.45Q131.42 30.75 130.82 31.14Q130.23 31.53 130.23 32.25Q130.23 32.87 130.69 33.22Q131.15 33.56 131.87 33.56Q132.82 33.56 133.50 33.05Q134.19 32.54 134.19 31.76ZM138.71 34.96V21.78Q138.71 21.68 138.78 21.61Q138.85 21.55 138.95 21.55H140.74Q140.84 21.55 140.90 21.61Q140.97 21.68 140.97 21.78V34.96Q140.97 35.06 140.90 35.13Q140.84 35.2 140.74 35.2H138.95Q138.85 35.2 138.78 35.13Q138.71 35.06 138.71 34.96ZM143.27 22.48Q143.27 21.88 143.66 21.49Q144.05 21.10 144.66 21.10Q145.26 21.10 145.65 21.49Q146.04 21.88 146.04 22.48Q146.04 23.09 145.65 23.48Q145.26 23.87 144.66 23.87Q144.05 23.87 143.66 23.48Q143.27 23.09 143.27 22.48ZM143.49 34.96V25.45Q143.49 25.35 143.56 25.28Q143.63 25.21 143.72 25.21H145.52Q145.61 25.21 145.68 25.28Q145.75 25.35 145.75 25.45V34.96Q145.75 35.06 145.68 35.13Q145.61 35.2 145.52 35.2H143.72Q143.63 35.2 143.56 35.13Q143.49 35.06 143.49 34.96ZM156.59 28.57V34.96Q156.59 35.06 156.52 35.13Q156.46 35.2 156.36 35.2H154.56Q154.47 35.2 154.40 35.13Q154.33 35.06 154.33 34.96V29.03Q154.33 28.14 153.82 27.58Q153.32 27.02 152.48 27.02Q151.64 27.02 151.12 27.57Q150.61 28.12 150.61 29.01V34.96Q150.61 35.06 150.54 35.13Q150.47 35.2 150.37 35.2H148.58Q148.48 35.2 148.41 35.13Q148.34 35.06 148.34 34.96V25.46Q148.34 25.37 148.41 25.30Q148.48 25.23 148.58 25.23H150.37Q150.47 25.23 150.54 25.30Q150.61 25.37 150.61 25.46V26.09Q150.61 26.15 150.65 26.17Q150.68 26.19 150.70 26.13Q151.50 25.07 153.12 25.07Q154.70 25.07 155.65 26.01Q156.59 26.95 156.59 28.57ZM166.87 28.39V34.96Q166.87 35.06 166.80 35.13Q166.73 35.2 166.64 35.2H164.84Q164.74 35.2 164.68 35.13Q164.61 35.06 164.61 34.96V34.34Q164.61 34.28 164.57 34.27Q164.53 34.26 164.49 34.30Q163.53 35.35 161.72 35.35Q160.26 35.35 159.31 34.61Q158.37 33.87 158.37 32.41Q158.37 30.89 159.43 30.04Q160.49 29.19 162.42 29.19H164.51Q164.61 29.19 164.61 29.09V28.62Q164.61 27.86 164.16 27.44Q163.71 27.02 162.81 27.02Q162.07 27.02 161.61 27.29Q161.16 27.55 161.04 28.02Q160.98 28.25 160.77 28.21L158.87 27.98Q158.78 27.96 158.71 27.91Q158.64 27.86 158.66 27.79Q158.82 26.60 159.94 25.84Q161.06 25.07 162.75 25.07Q163.98 25.07 164.92 25.50Q165.86 25.93 166.36 26.68Q166.87 27.43 166.87 28.39ZM164.61 31.76V30.85Q164.61 30.75 164.51 30.75H162.87Q161.84 30.75 161.24 31.14Q160.65 31.53 160.65 32.25Q160.65 32.87 161.11 33.22Q161.57 33.56 162.29 33.56Q163.24 33.56 163.92 33.05Q164.61 32.54 164.61 31.76Z M99.42 54.56V41.38Q99.42 41.28 99.49 41.21Q99.56 41.15 99.65 41.15H101.45Q101.54 41.15 101.61 41.21Q101.68 41.28 101.68 41.38V52.75Q101.68 52.84 101.78 52.84H108.31Q108.41 52.84 108.48 52.91Q108.54 52.98 108.54 53.08V54.56Q108.54 54.66 108.48 54.73Q108.41 54.8 108.31 54.8H99.65Q99.56 54.8 99.49 54.73Q99.42 54.66 99.42 54.56ZM118.26 47.99V54.56Q118.26 54.66 118.19 54.73Q118.12 54.8 118.02 54.8H116.23Q116.13 54.8 116.06 54.73Q115.99 54.66 115.99 54.56V53.94Q115.99 53.88 115.95 53.87Q115.92 53.86 115.88 53.90Q114.92 54.95 113.11 54.95Q111.65 54.95 110.70 54.21Q109.75 53.47 109.75 52.01Q109.75 50.49 110.82 49.64Q111.88 48.79 113.81 48.79H115.90Q115.99 48.79 115.99 48.69V48.22Q115.99 47.46 115.55 47.04Q115.10 46.62 114.20 46.62Q113.46 46.62 113.00 46.89Q112.54 47.15 112.43 47.62Q112.37 47.85 112.15 47.81L110.26 47.58Q110.16 47.56 110.09 47.51Q110.03 47.46 110.05 47.39Q110.20 46.20 111.32 45.44Q112.44 44.67 114.14 44.67Q115.37 44.67 116.31 45.10Q117.24 45.53 117.75 46.28Q118.26 47.03 118.26 47.99ZM115.99 51.36V50.45Q115.99 50.35 115.90 50.35H114.26Q113.22 50.35 112.63 50.74Q112.04 51.13 112.04 51.85Q112.04 52.47 112.49 52.82Q112.95 53.16 113.67 53.16Q114.63 53.16 115.31 52.65Q115.99 52.14 115.99 51.36ZM129.25 49.78Q129.25 51.17 128.88 52.22Q128.45 53.51 127.50 54.23Q126.54 54.95 125.16 54.95Q123.79 54.95 122.92 53.92Q122.88 53.86 122.84 53.88Q122.80 53.90 122.80 53.96V54.56Q122.80 54.66 122.73 54.73Q122.66 54.8 122.57 54.8H120.77Q120.67 54.8 120.61 54.73Q120.54 54.66 120.54 54.56V41.38Q120.54 41.28 120.61 41.21Q120.67 41.15 120.77 41.15H122.57Q122.66 41.15 122.73 41.21Q122.80 41.28 122.80 41.38V45.61Q122.80 45.67 122.84 45.69Q122.88 45.71 122.92 45.67Q123.75 44.67 125.14 44.67Q126.58 44.67 127.53 45.40Q128.47 46.12 128.92 47.40Q129.25 48.50 129.25 49.78ZM126.93 49.82Q126.93 48.30 126.35 47.44Q125.82 46.62 124.79 46.62Q123.83 46.62 123.33 47.48Q122.84 48.28 122.84 49.80Q122.84 51.30 123.29 52.07Q123.79 53.00 124.81 53.00Q125.35 53.00 125.78 52.76Q126.21 52.51 126.47 52.07Q126.93 51.25 126.93 49.82ZM131.46 52.01Q131.13 50.95 131.13 49.78Q131.13 48.54 131.44 47.56Q131.89 46.20 133.00 45.44Q134.11 44.67 135.67 44.67Q137.15 44.67 138.23 45.44Q139.32 46.20 139.76 47.54Q140.12 48.48 140.12 49.76Q140.12 50.99 139.78 51.99Q139.34 53.37 138.24 54.16Q137.15 54.95 135.65 54.95Q134.11 54.95 133.01 54.17Q131.91 53.39 131.46 52.01ZM137.64 51.44Q137.83 50.80 137.83 49.80Q137.83 48.75 137.64 48.16Q137.42 47.42 136.90 47.02Q136.37 46.62 135.61 46.62Q134.89 46.62 134.36 47.02Q133.84 47.42 133.60 48.16Q133.41 48.85 133.41 49.80Q133.41 50.76 133.60 51.44Q133.82 52.18 134.35 52.59Q134.89 53.00 135.65 53.00Q136.37 53.00 136.89 52.59Q137.40 52.18 137.64 51.44ZM148.38 44.83H150.16Q150.26 44.83 150.32 44.90Q150.39 44.97 150.39 45.06V54.56Q150.39 54.66 150.32 54.73Q150.26 54.8 150.16 54.8H148.38Q148.29 54.8 148.22 54.73Q148.15 54.66 148.15 54.56V53.94Q148.15 53.88 148.11 53.86Q148.07 53.84 148.03 53.90Q147.23 54.93 145.63 54.93Q144.15 54.93 143.15 54.07Q142.14 53.22 142.14 51.64V45.06Q142.14 44.97 142.21 44.90Q142.28 44.83 142.38 44.83H144.17Q144.27 44.83 144.34 44.90Q144.41 44.97 144.41 45.06V50.99Q144.41 51.91 144.88 52.45Q145.36 53.00 146.22 53.00Q147.10 53.00 147.62 52.45Q148.15 51.91 148.15 50.99V45.06Q148.15 44.97 148.22 44.90Q148.29 44.83 148.38 44.83ZM158.54 44.97Q158.70 45.05 158.66 45.26L158.33 47.01Q158.31 47.25 158.06 47.15Q157.76 47.05 157.37 47.05Q157.12 47.05 156.98 47.07Q156.16 47.11 155.62 47.65Q155.07 48.18 155.07 49.04V54.56Q155.07 54.66 155.00 54.73Q154.94 54.8 154.84 54.8H153.04Q152.95 54.8 152.88 54.73Q152.81 54.66 152.81 54.56V45.06Q152.81 44.97 152.88 44.90Q152.95 44.83 153.04 44.83H154.84Q154.94 44.83 155.00 44.90Q155.07 44.97 155.07 45.06V45.94Q155.07 46.02 155.10 46.03Q155.13 46.04 155.17 45.98Q155.99 44.71 157.45 44.71Q158.07 44.71 158.54 44.97ZM168.62 49.78 168.60 50.39Q168.60 50.62 168.37 50.62H162.27Q162.17 50.62 162.17 50.72Q162.23 51.36 162.35 51.60Q162.81 53.00 164.63 53.02Q165.95 53.02 166.73 51.93Q166.81 51.81 166.93 51.81Q167.01 51.81 167.06 51.87L168.27 52.86Q168.45 53.00 168.33 53.18Q167.73 54.03 166.72 54.50Q165.72 54.97 164.49 54.97Q162.97 54.97 161.91 54.29Q160.84 53.61 160.36 52.38Q159.91 51.32 159.91 49.45Q159.91 48.32 160.14 47.62Q160.53 46.25 161.61 45.46Q162.70 44.67 164.22 44.67Q168.06 44.67 168.55 48.69Q168.62 49.18 168.62 49.78ZM162.35 47.99Q162.23 48.32 162.19 48.85Q162.15 48.94 162.27 48.94H166.23Q166.32 48.94 166.32 48.85Q166.28 48.36 166.21 48.11Q166.03 47.40 165.51 47.01Q165.00 46.62 164.22 46.62Q163.50 46.62 163.02 46.99Q162.54 47.35 162.35 47.99ZM163.11 43.31 164.18 41.30Q164.26 41.15 164.47 41.15H166.01Q166.15 41.15 166.20 41.23Q166.25 41.32 166.17 41.44L164.82 43.43Q164.72 43.58 164.55 43.58H163.26Q163.13 43.58 163.09 43.50Q163.05 43.43 163.11 43.31Z';
+const SCL=(h=42)=>db.cfg.logo?`<img src="${db.cfg.logo}" alt="${esc(db.cfg.name)}" style="height:${h}px;max-width:200px;object-fit:contain">`:`<svg height="${h}" viewBox="0 0 171 64" role="img" aria-label="Santa Catalina Labouré" style="display:block"><g fill="#00C9B9"><path transform="translate(-6,-7)" d="${LOGO_MARK}"/><path d="${LOGO_TXT}"/></g></svg>`;
+
+/* estados */
+const ST={co:['Pendiente','Aprobada','Rechazada'],job:['Pendiente','Aprobada','Rechazada','Finalizada'],app:['Postulado','En revisión','Entrevista','Contratado','Descartado'],stu:['Activo','Inactivo']};
+const CL={Pendiente:'pe',Aprobada:'ok',Rechazada:'no',Finalizada:'mu',Postulado:'pe','En revisión':'in',Entrevista:'in',Contratado:'ok',Descartado:'no',Activo:'ok',Inactivo:'mu','Listo para postular':'ok'};
+const pill=v=>`<span class="pill ${CL[v]||'mu'}">${esc(v)}</span>`;
+const ssel=(k,id,v)=>`<select class="pill ${CL[v]}" data-ch="${k}" data-id="${id}" aria-label="Cambiar estado">${ST[k].map(s=>`<option ${s===v?'selected':''}>${s}</option>`).join('')}</select>`;
+
+/* ---------- estado de la interfaz ---------- */
+let portal='campus',me=null,tab='dash',F={},OPEN=new Set(),curT=null,pendingJob=null,regMode=false,cfgTab='info',bellOpen=false;
+const route=saved=>{const h=(saved&&ss.get('scl_portal'))||location.hash.replace('#','');portal=h==='empresas'?'company':h==='ofertas'?'public':'campus'};
+const setPortal=p=>{portal=p;regMode=false;try{history.replaceState(null,'',p==='company'?'#empresas':p==='public'?'#ofertas':'#campus')}catch(e){}me=session();draw();window.scrollTo(0,0)};
+function session(){const sid=ss.get(SK),u=sid?usr(sid):null;if(!u)return null;if(u.role==='student'&&u.status==='Inactivo')return null;if(portal==='public')return u.role==='student'?u:null;return (u.role==='company')===(portal==='company')?u:null}
+
+/* ---------- notificaciones (solo administrador) ---------- */
+const notify=(text,go)=>db.notes.push({id:nid(db.notes),text,date:now(),read:false,go});
+const unread=()=>db.notes.filter(n=>!n.read).length;
+
+/* ---------- filtros, paginación, exportación ---------- */
+const inRange=d=>(!F.from||d.slice(0,10)>=F.from)&&(!F.to||d.slice(0,10)<=F.to);
+const hit=t=>!F.q||t.toLowerCase().includes(F.q.toLowerCase().trim());
+function paged(list){const n=+F.size||10,pages=Math.max(1,Math.ceil(list.length/n));F.page=Math.min(Math.max(1,F.page||1),pages);const p=F.page,from=(p-1)*n;
+ const btns=[];const lo=Math.max(1,p-2),hi=Math.min(pages,lo+4);for(let i=lo;i<=hi;i++)btns.push(`<button data-a="pg" data-id="${i}" class="${i===p?'on':''}" aria-label="Página ${i}">${i}</button>`);
+ return{items:list.slice(from,from+n),foot:`<div class="pg"><span>${list.length?(from+1)+'–'+Math.min(from+n,list.length)+' de '+list.length:'No se encontraron registros'}</span><div><button data-a="pg" data-id="1" ${p===1?'disabled':''} aria-label="Primera">«</button><button data-a="pg" data-id="${p-1}" ${p===1?'disabled':''} aria-label="Anterior">‹</button>${btns.join('')}<button data-a="pg" data-id="${p+1}" ${p===pages?'disabled':''} aria-label="Siguiente">›</button><button data-a="pg" data-id="${pages}" ${p===pages?'disabled':''} aria-label="Última">»</button></div></div>`}}
+const opt=(arr,v,all)=>`<option value="">${all}</option>`+arr.map(x=>{const[val,l]=Array.isArray(x)?x:[x,x];return `<option value="${esc(val)}" ${String(val)===String(v??'')?'selected':''}>${esc(l)}</option>`}).join('');
+function toolbar(o={}){return `<div class="tool"><select class="sz" data-f="size" aria-label="Registros por página">${[10,25,50].map(n=>`<option ${+F.size===n?'selected':''}>${n}</option>`).join('')}</select><input class="q" data-f="q" placeholder="Buscar" value="${esc(F.q||'')}" aria-label="Buscar">${o.dates!==false?`<span class="dr">${ic('cal')}<input type="date" data-f="from" value="${F.from||''}" aria-label="Desde"><span>–</span><input type="date" data-f="to" value="${F.to||''}" aria-label="Hasta"></span>`:''}${o.sel||''}<span class="sp"></span>${o.right||''}${o.exp?ibtn('down','exp',o.exp,'Exportar a CSV'):''}</div>`}
+const fsel=(k,arr,all)=>`<select data-f="${k}" aria-label="${all}">${opt(arr,F[k],all)}</select>`;
+function table(fn){curT=fn;return `<div class="tbw" id="tw">${fn()}</div>`}
+const refresh=()=>{const w=$('#tw');if(w&&curT){try{w.innerHTML=curT();ss.set('scl_F',JSON.stringify(F))}catch(e){draw()}}else draw()};
+const EXP={};
+async function exportCSV(key){const [name,head,rows]=EXP[key]();const csv='\ufeff'+[head,...rows].map(r=>r.map(c=>'"'+String(c??'').replace(/"/g,'""')+'"').join(';')).join('\r\n');const filename=name+'_'+today()+'.csv';
+ try{const d=window.claude?.use?await window.claude.use('downloads'):null;if(d){await d.save({filename,data:csv});toast('Archivo exportado');return}}catch(e){if(e&&e.code==='declined')return;}
+ try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download=filename;document.body.append(a);a.click();a.remove();toast('Archivo exportado')}catch(e){toast('No se pudo exportar el archivo en esta vista.',1)}}
+
+/* ---------- modal ---------- */
+const modal=(t,b,wide)=>{$('#modal').innerHTML=`<div class="mb" data-a="bd"><div class="mc ${wide?'wd':''}" role="dialog" aria-modal="true" aria-label="${esc(t)}"><div class="ch"><h2>${t}</h2><button class="ib" data-a="close" aria-label="Cerrar">${ic('x')}</button></div><div class="cp">${b}</div></div></div>`;const f=$('#modal input,#modal select,#modal textarea,#modal .btn');f&&f.focus()};
+const close=()=>{$('#modal').innerHTML=''};
+
+/* =========================================================
+   PANTALLAS DE ACCESO
+   ========================================================= */
+function authCampus(){const r=regMode;return `<section class="auth"><div class="box"><div class="logo">${SCL(64)}</div><p class="sub">Bolsa laboral · ${esc(db.cfg.name)}</p>
+${r?`<h1>Crear cuenta de alumno</h1><form data-form="regStu"><div class="g2"><div><label class="req">Nombres</label><input name="first" required></div><div><label class="req">Apellidos</label><input name="last" required></div></div><div class="g2"><div><label class="req">DNI</label><input name="dni" required inputmode="numeric" pattern="[0-9]{8}" title="8 dígitos"></div><div><label class="req">Ciclo</label><select name="cycle">${[1,2,3,4,5,6].map(c=>`<option>${c}</option>`).join('')}<option>Egresado</option></select></div></div><label class="req">Carrera</label><select name="career" required>${db.cfg.careers.map(c=>`<option>${esc(c)}</option>`).join('')}</select><label class="req">Correo electrónico</label><input type="email" name="email" required><label class="req">Contraseña (mínimo 6 caracteres)</label><input type="password" name="password" required minlength="6"><button class="btn w">Crear cuenta</button></form>`
+:`<h1>Iniciar sesión</h1><p class="sub">Administradores y alumnos</p><form data-form="login"><label>Correo electrónico</label><input type="email" name="email" required autocomplete="username" placeholder="tu@correo.com"><label>Contraseña</label><input type="password" name="password" required autocomplete="current-password"><button class="btn w">Ingresar</button></form>`}
+<p id="err" class="err hidden" role="alert"></p>
+<div class="foot"><button class="lk" data-a="regmode">${r?'¿Ya tienes cuenta? Inicia sesión':'¿Eres alumno y no tienes cuenta? Regístrate'}</button><button class="lk" data-a="portal" data-id="public">Ver ofertas publicadas</button><button class="lk" data-a="portal" data-id="company">¿Eres empresa? Ir al portal de empresas</button></div></div></section>`}
+function authCompany(){const r=regMode;return `<section class="auth emp"><div class="box"><div class="logo">${SCL(64)}</div><h1>${r?'Registro de empresa':'Portal de empresas'}</h1><p class="sub">${r?'Registra tu empresa para publicar convocatorias para nuestros estudiantes y egresados.':'Publica convocatorias para estudiantes y egresados de Santa Catalina.'}</p>
+${r?`<form data-form="regCo"><label class="req">Razón social</label><input name="name" required><div class="g2"><div><label class="req">RUC</label><input name="ruc" required inputmode="numeric" pattern="[0-9]{11}" title="11 dígitos"></div><div><label class="req">Rubro</label><select name="sector">${['Clínica','Hospital','Policlínico','Botica / Farmacia','Laboratorio clínico','Rehabilitación','Salud mental','Óptica','Empresa (área administrativa)','Otro'].map(s=>`<option>${s}</option>`).join('')}</select></div></div><div class="g2"><div><label class="req">País</label><select name="country"><option>Perú</option><option>Chile</option><option>Colombia</option><option>Ecuador</option><option>Bolivia</option></select></div><div><label class="req">Ciudad</label><input name="city" required></div></div><label class="req">Persona de contacto</label><input name="contact" required><label class="req">Teléfono</label><input name="phone" required><label class="req">Correo (será tu usuario)</label><input type="email" name="email" required><label class="req">Contraseña (mínimo 6 caracteres)</label><input type="password" name="password" required minlength="6"><button class="btn w tl">Registrar empresa</button></form>`
+:`<form data-form="loginCo"><label>Correo de la empresa</label><input type="email" name="email" required autocomplete="username"><label>Contraseña</label><input type="password" name="password" required autocomplete="current-password"><button class="btn w tl">Ingresar</button></form>`}
+<p id="err" class="err hidden" role="alert"></p>
+<div class="foot"><button class="lk" data-a="regmode">${r?'¿Ya tienes cuenta? Inicia sesión':'¿Tu empresa no está registrada? Regístrala'}</button><button class="lk" data-a="portal" data-id="campus">Ir al portal de alumnos y administración</button></div></div></section>`}
+const err=m=>{const e=$('#err');if(!e)return toast(m,1);e.textContent=m;e.classList.toggle('hidden',!m)};
+
+/* =========================================================
+   PORTAL PÚBLICO DE OFERTAS (alumno busca y entra con sus credenciales)
+   ========================================================= */
+function publicPortal(){const s=db.cfg.site,logged=me&&me.role==='student';
+ if(!s.public)return `<header class="pt">${SCL(40)}<button class="btn sl" data-a="portal" data-id="campus">Ingresar</button></header><div class="wrap flat"><div class="card"><div class="cp em">La bolsa laboral no está publicando ofertas en este momento.</div></div></div>`;
+ const list=db.jobs.filter(vis).filter(j=>hit(j.title+' '+co(j.companyId).name+' '+j.desc+' '+j.place)&&(!F.car||j.career===F.car)&&(!F.typ||j.type===F.typ)&&(!F.cty||city(j)===F.cty)).sort((a,b)=>b.date.localeCompare(a.date));
+ const cities=[...new Set(db.jobs.filter(vis).map(city))].sort();
+ return `<header class="pt">${SCL(40)}<div class="ui">${logged?`<span class="uname">${esc(full(me))}</span><button class="btn sl" data-a="gohome">Ir a mi cuenta</button>`:`<button class="lk" data-a="portal" data-id="campus">Campus</button><button class="btn sl" data-a="pubLogin">${ic('user')} Ingresar con mi cuenta</button>`}</div></header>
+<section class="hero pub" style="--hc:${esc(s.color)}"><h1>${esc(s.title)}</h1><p>${esc(s.welcome)}</p></section>
+<div class="wrap"><div class="card"><div class="cp"><div class="ftb" style="margin:0"><input data-f="q" placeholder="Buscar puesto, empresa o distrito" value="${esc(F.q||'')}" aria-label="Buscar"><select data-f="car" aria-label="Carrera">${opt(db.cfg.careers,F.car,'Todas las carreras')}</select><select data-f="typ" aria-label="Tipo">${opt(['Empleo','Prácticas pre-profesionales','Prácticas profesionales'],F.typ,'Empleo y prácticas')}</select><select data-f="cty" aria-label="Ciudad">${opt(cities,F.cty,'Todas las ciudades')}</select></div></div></div>
+<div id="tw">${offersGrid(list)}</div></div>`}
+function offersGrid(list){return list.length?`<p class="mu" style="margin-bottom:.7rem">${list.length} ${list.length===1?'oferta disponible':'ofertas disponibles'}</p><div class="offers">${list.map(j=>{const c=co(j.companyId);return `<article class="of"><h3>${esc(j.title)}</h3><div class="co">${esc(c.name)}</div><div class="mt"><span class="tag">${esc(j.career)}</span><span class="tag">${esc(j.type)}</span></div><div class="mu">${ic('pin')} ${esc(j.place)} · Hasta el ${fd(j.deadline)}</div><div class="bt"><b style="font-weight:500">${money(j.salary)}</b><button class="btn sm tl" data-a="pubView" data-id="${j.id}">Ver y postular</button></div></article>`}).join('')}</div>`:`<div class="card"><div class="cp em">No hay ofertas con esos filtros. Prueba con otra carrera o ciudad.</div></div>`}
+
+/* =========================================================
+   APLICACIÓN (campus: admin / alumno · empresas)
+   ========================================================= */
+const TABS={
+ admin:[['dash','home','Dashboard'],['empresas','building','Empresas'],['avisos','mega','Avisos'],['postulaciones','list','Postulaciones'],['estudiantes','cap','Estudiantes'],['config','cog','Configuración']],
+ student:[['dash','home','Dashboard'],['avisos','search','Buscar empleo'],['empresas','building','Empresas'],['postulaciones','list','Mis postulaciones'],['perfil','user','Mi perfil']],
+ company:[['alta','send','Alta de Avisos'],['gestor','list','Gestor de Avisos'],['empresa','building','Mi empresa']]};
+const TITLE={dash:'Dashboard',empresas:'Gestión de Empresas',avisos:'Gestión de Avisos',postulaciones:'Postulaciones',estudiantes:'Gestión de Estudiantes',config:'Configuración de la cuenta',perfil:'Mi perfil'};
+const STITLE={empresas:'Empresas',avisos:'Avisos disponibles',postulaciones:'Mis postulaciones'};
+
+function campusApp(){const r=me.role;const n=unread();
+ return `<header class="top">${HR()}<div class="ui">${ibtn('moon','theme','','Cambiar tema claro/oscuro')}${r==='admin'?`<div class="bell"><button class="ib" data-a="bell" aria-label="Notificaciones" aria-expanded="${bellOpen}">${ic('bell')}</button>${n?`<span class="dot">${n}</span>`:''}${bellOpen?bellPanel():''}</div>`:''}<span class="uname">${esc(me.first)}</span><span class="av" aria-hidden="true">${esc(me.first[0])}</span>${ibtn('out','logout','','Cerrar sesión')}</div></header>
+<nav class="nav" aria-label="Secciones">${TABS[r].map(([k,i,l])=>`<button data-a="tab" data-id="${k}" class="${k===tab?'on':''}">${ic(i)} ${l}</button>`).join('')}</nav>
+${r==='student'&&tab==='avisos'?V.student.avisos():`<div class="ph"><h1>${r==='student'&&STITLE[tab]?STITLE[tab]:TITLE[tab]}</h1></div><main id="main">${V[r][tab]()}</main>`}`}
+function bellPanel(){const ns=db.notes.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,12);
+ return `<div class="np"><h4>Notificaciones ${unread()?`<button class="lk" data-a="readAll">Marcar todo como leído</button>`:''}</h4><ul>${ns.length?ns.map(n=>`<li class="${n.read?'':'un'}" data-a="note" data-id="${n.id}">${n.go&&n.go[0]==='empresas'?logo(co(n.go[1])):logo(co(job(n.go?.[1])?.companyId))}<span class="t">${n.text}</span><span class="h">${ago(n.date)}</span></li>`).join(''):'<li class="em">Sin notificaciones</li>'}</ul></div>`}
+
+function companyApp(){const c=co(me.companyId);
+ return `<header class="pt">${SCL(48)}<nav aria-label="Secciones">${TABS.company.map(([k,i,l])=>`<button data-a="tab" data-id="${k}" class="${k===tab?'on':''}">${l}</button>`).join('')}</nav><div class="ui">${ibtn('moon','theme','','Cambiar tema claro/oscuro')}<span class="uname">${esc(c.contact||c.name)}</span>${ibtn('out','logout','','Cerrar sesión')}</div></header>
+<section class="hero"><h1>${esc(c.name)}</h1><p>${tab==='alta'?'Completa la información solicitada y <b>¡envía tu solicitud de publicación!</b>':tab==='gestor'?'Revisa el estado de tus avisos y a los alumnos que postularon.':'Mantén actualizados los datos de tu empresa.'}</p></section>
+<div class="wrap">${coBanner(c)}${V.company[tab]()}</div>`}
+const coBanner=c=>c.status==='Aprobada'?'':`<div class="note ${c.status==='Rechazada'?'no':''}">${c.status==='Pendiente'?'Tu empresa está en revisión por la bolsa laboral. Puedes enviar avisos ahora; se publicarán cuando la empresa y el aviso sean aprobados.':'La bolsa laboral rechazó el registro de tu empresa.'+(c.note?' Motivo: '+esc(c.note):'')+' Actualiza tus datos en “Mi empresa” para solicitar una nueva revisión.'}</div>`;
+
+/* ---------- celdas comunes ---------- */
+const statCard=(n,l,s,i)=>`<div class="sc"><div class="r1"><div><div class="n">${n}</div><div class="l">${l}</div></div>${ic(i)}</div><div class="s">${s}</div></div>`;
+const xpBtn=(k,id)=>{const on=OPEN.has(k+id);return `<td class="x"><button class="xp ${on?'on':''}" data-a="xp" data-id="${k+id}" aria-label="${on?'Ocultar':'Ver'} detalle" aria-expanded="${on}">${ic('chev')}</button></td>`};
+const jobDetail=j=>{const c=co(j.companyId);return `<div class="kv"><div><span>Empresa</span>${esc(c?.name)}</div><div><span>Carrera</span>${esc(j.career)}</div><div><span>Tipo</span>${esc(j.type)}</div><div><span>Modalidad</span>${esc(j.mode)}</div><div><span>Lugar</span>${esc(j.place)}</div><div><span>Vacantes</span>${esc(j.vacancies)}</div><div><span>Remuneración</span>${money(j.salary)}</div><div><span>Fecha límite</span>${fd(j.deadline)}</div></div><p style="margin-top:.9rem;font-size:.84rem">${esc(j.desc)}</p>${j.reqs?`<p style="margin-top:.5rem;font-size:.84rem"><b style="font-weight:500">Requisitos:</b> ${esc(j.reqs)}</p>`:''}${j.perks?`<p style="margin-top:.3rem;font-size:.84rem"><b style="font-weight:500">Beneficios:</b> ${esc(j.perks)}</p>`:''}${j.note?`<p class="note ${j.status==='Rechazada'?'no':''}" style="margin:.8rem 0 0">Comentario de la bolsa laboral: ${esc(j.note)}</p>`:''}`};
+const stuApplied=id=>db.apps.some(a=>a.studentId===me.id&&a.jobId===+id);
+
+const V={admin:{},student:{},company:{}};
+const tplReady=u=>!!(u&&(u.phone||'').trim()&&(u.about||'').trim()&&(u.edu||[]).some(e=>(e.inst||'').trim()||(e.prog||'').trim()));
+const hasFile=u=>!!(u&&u.cvFile);
+const cvReady=u=>tplReady(u)||hasFile(u);
+const fill=a=>(a||[]).filter(x=>x&&Object.values(x).some(v=>String(v||'').trim()));
+const cvPct=u=>{const c=[u.phone,u.district,u.about,fill(u.edu).length,fill(u.exp).length,fill(u.courses).length,u.skills,fill(u.langs).length];return Math.round(c.filter(x=>x&&String(x).trim()).length/c.length*100)};
+function cvDoc(u){const edu=fill(u.edu),exp=fill(u.exp),cur=fill(u.courses),lan=fill(u.langs),sk=(u.skills||'').split(',').map(x=>x.trim()).filter(Boolean),nx='<p class="cvx">Sin completar</p>';
+ return `<div class="cvp"><div class="cvh"><div><h2>${esc(full(u))}</h2><p class="cvr">${esc(u.career)}${u.cycle?' · '+(u.cycle==='Egresado'?'Egresado(a)':'Ciclo '+esc(u.cycle)):''}</p></div><div class="cvid">${esc(u.code||'')}<br>${esc(db.cfg.name)}</div></div>
+<div class="cvb"><aside><h4>Contacto</h4><p>${esc(u.email)}</p><p>${esc(u.phone)||'<span class="cvx">Teléfono sin completar</span>'}</p>${u.district?`<p>${esc(u.district)}</p>`:''}<p>DNI ${esc(u.dni)}</p>
+${sk.length?`<h4>Habilidades</h4><ul class="cvsk">${sk.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''}
+${lan.length?`<h4>Idiomas</h4>${lan.map(l=>`<p><b style="font-weight:600">${esc(l.lang)}</b>${l.level?' · '+esc(l.level):''}</p>`).join('')}`:''}
+${u.avail||u.shift?`<h4>Disponibilidad</h4>${u.avail?`<p>${esc(u.avail)}</p>`:''}${u.shift?`<p>${esc(u.shift)}</p>`:''}`:''}</aside>
+<div class="cvm"><h4>Perfil profesional</h4>${u.about?`<p>${esc(u.about)}</p>`:nx}
+<h4>Formación académica</h4>${edu.map(e=>`<div class="cvi"><div class="cvt"><b>${esc(e.prog)}</b><span>${esc(e.from)}${e.to?' – '+esc(e.to):''}</span></div><p>${esc(e.inst)}${e.status?' · '+esc(e.status):''}</p></div>`).join('')||nx}
+<h4>Experiencia y prácticas</h4>${exp.map(e=>`<div class="cvi"><div class="cvt"><b>${esc(e.role)}</b><span>${esc(e.from)}${e.to?' – '+esc(e.to):''}</span></div><p>${esc(e.place)}</p>${e.desc?`<p class="cvd">${esc(e.desc)}</p>`:''}</div>`).join('')||nx}
+${cur.length?`<h4>Cursos y certificaciones</h4>${cur.map(c=>`<div class="cvi"><div class="cvt"><b>${esc(c.name)}</b><span>${esc(c.year)}</span></div><p>${esc(c.inst)}</p></div>`).join('')}`:''}</div></div>
+<div class="cvf">CV generado en la bolsa laboral de ${esc(db.cfg.name)} · Actualizado ${fd(u.mod)}${u.cvFile?' · También subió su CV en archivo':''}</div></div>`}
+const cvBtn=id=>`<button class="btn sm g" data-a="cv" data-id="${id}" title="${hasFile(usr(id))?'Plantilla y archivo subido':'Plantilla de CV'}">${ic('file')} Ver CV${hasFile(usr(id))?' '+ic('clip'):''}</button>`;
+async function saveFile(filename,data,mime){try{const d=window.claude?.use?await window.claude.use('downloads'):null;if(d){await d.save({filename,data});toast('Archivo descargado');return}}catch(e){if(e&&e.code==='declined')return}
+ try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([data],{type:mime}));a.download=filename;document.body.append(a);a.click();a.remove();toast('Archivo descargado')}catch(e){toast('No se pudo descargar el archivo en esta vista.',1)}}
+
+/* ===================== ADMINISTRADOR ===================== */
+V.admin.dash=()=>{const last=db.jobs.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+ return `<h2 class="sec">Actividad reciente</h2><div class="sg">${statCard(db.jobs.filter(vis).length,'PUBLICACIONES','Total de avisos activos','mega')}${statCard(db.companies.filter(c=>c.status==='Aprobada').length,'EMPRESAS','Total de empresas vinculadas','building')}${statCard(db.apps.length,'POSTULACIONES','Total de candidatos postulados','users')}${statCard(db.apps.filter(a=>a.status==='Contratado').length,'CONTRATADOS','Total de candidatos contratados','award')}</div>
+<div class="ch" style="border:0;padding:0 0 .7rem"><h2 class="sec" style="margin:0">Últimas solicitudes de publicación</h2><button class="lk" data-a="tab" data-id="avisos">Ver todas</button></div>
+<div class="card">${last.map(j=>{const c=co(j.companyId);return `<div class="lr">${logo(c)}<div class="tt">${esc(c.name)} – ${esc(j.title)} – ${esc(city(j))}<small>Solicitado ${fdt(j.date)}${c.status!=='Aprobada'?' · empresa '+c.status.toLowerCase():''}</small></div><div class="ac">${ibtn('eye','jview',j.id,'Ver aviso')}${ibtn('link','jpub',j.id,'Vista pública')}${ssel('job',j.id,j.status)}</div></div>`}).join('')||'<div class="em">Aún no hay solicitudes</div>'}</div>`};
+
+V.admin.empresas=()=>{const countries=[...new Set(db.companies.map(c=>c.country))].sort();
+ EXP.co=()=>['empresas',['Empresa','RUC','Rubro','País','Ciudad','Contacto','Correo','Teléfono','Avisos','Aprobados','Activos','Rechazados','Registro','Modificación','Estado'],coList().map(c=>{const s=coStats(c);return[c.name,c.ruc,c.sector,c.country,c.city,c.contact,c.email,c.phone,s.t,s.a,s.v,s.r,fd(c.date),fdt(c.mod),c.status]})];
+ return toolbar({sel:fsel('est',ST.co,'Filtrar por estado')+fsel('pais',countries,'Filtrar por país'),exp:'co'})+table(coTable)};
+const coList=()=>db.companies.filter(c=>hit(c.name+' '+c.ruc+' '+c.city+' '+c.sector)&&inRange(c.mod)&&(!F.est||c.status===F.est)&&(!F.pais||c.country===F.pais)).sort((a,b)=>b.mod.localeCompare(a.mod));
+const coStats=c=>{const js=db.jobs.filter(j=>j.companyId===c.id);return{t:js.length,a:js.filter(j=>j.status==='Aprobada').length,v:js.filter(vis).length,r:js.filter(j=>j.status==='Rechazada').length,js}};
+function coTable(){const{items,foot}=paged(coList());
+ return `<div class="cb"><table><thead><tr><th></th><th>Empresa</th><th>Total</th><th>Aceptados</th><th>Activos</th><th>Rechazados</th><th>Modificación</th><th>Acción</th><th>Estado</th></tr></thead><tbody>${items.map(c=>{const s=coStats(c),k='c'+c.id;
+ return `<tr>${xpBtn('c',c.id)}<td><b style="font-weight:500">${esc(c.name)}</b><br><span class="mu">${esc(c.sector)} · ${esc(c.city)}, ${esc(c.country)}</span></td><td>${s.t}</td><td>${s.a}</td><td>${s.v}</td><td>${s.r}</td><td class="nw">${fd(c.mod)}</td><td class="nw">${ibtn('link','cview',c.id,'Ver detalle de la empresa')}</td><td>${ssel('co',c.id,c.status)}</td></tr>${OPEN.has(k)?`<tr class="dt"><td colspan="9">${coDetail(c,s)}</td></tr>`:''}`}).join('')||'<tr><td colspan="9" class="em">No hay datos disponibles</td></tr>'}</tbody></table></div>${foot}`}
+const coDetail=(c,s)=>`<div class="kv"><div><span>RUC</span>${esc(c.ruc)}</div><div><span>Rubro</span>${esc(c.sector)}</div><div><span>Contacto</span>${esc(c.contact)}</div><div><span>Correo</span>${esc(c.email)}</div><div><span>Teléfono</span>${esc(c.phone)}</div><div><span>Dirección</span>${esc(c.address||'—')}</div><div><span>Registro</span>${fd(c.date)}</div><div><span>Usuario del portal</span>${esc(db.users.find(u=>u.companyId===c.id)?.email||'Sin cuenta')}</div></div>${c.note?`<p class="note ${c.status==='Rechazada'?'no':''}" style="margin:.8rem 0 0">Comentario: ${esc(c.note)}</p>`:''}<p class="mu" style="margin:.9rem 0 .3rem">Avisos de la empresa</p>${s.js.length?s.js.map(j=>`<div style="display:flex;justify-content:space-between;gap:.6rem;padding:.3rem 0;font-size:.8rem;border-top:1px solid var(--bd)"><span>${esc(j.title)} <span class="mu">· ${fd(j.date)}</span></span>${pill(j.status)}</div>`).join(''):'<span class="mu">Sin avisos</span>'}`;
+
+V.admin.avisos=()=>{EXP.job=()=>['avisos',['Aviso','Empresa','Carrera','Tipo','Lugar','Vistas','Postulaciones','Solicitud','Modificación','Estado'],jobList().map(j=>[j.title,co(j.companyId)?.name,j.career,j.type,j.place,j.views,db.apps.filter(a=>a.jobId===j.id).length,fdt(j.date),fdt(j.mod),j.status])];
+ return toolbar({sel:fsel('est',ST.job,'Filtrar por estado')+fsel('car',db.cfg.careers,'Filtrar por carrera'),exp:'job'})+table(jobTable)};
+const jobList=()=>db.jobs.filter(j=>hit(j.title+' '+co(j.companyId)?.name+' '+j.place)&&inRange(j.date)&&(!F.est||j.status===F.est)&&(!F.car||j.career===F.car)).sort((a,b)=>b.date.localeCompare(a.date));
+function jobTable(){const{items,foot}=paged(jobList());
+ return `<div class="cb"><table><thead><tr><th></th><th>Aviso</th><th>Empresa</th><th>Vistas</th><th>Postulaciones</th><th>Solicitud</th><th>Modificación</th><th>Acción</th><th>Estado</th></tr></thead><tbody>${items.map(j=>{const c=co(j.companyId),k='j'+j.id;
+ return `<tr>${xpBtn('j',j.id)}<td><div class="trunc" title="${esc(j.title)}" style="font-weight:500">${esc(j.title)}</div><span class="mu">${esc(j.career)}</span></td><td><div class="trunc" style="max-width:170px" title="${esc(c?.name)}">${esc(c?.name)}</div>${c&&c.status!=='Aprobada'?`<span class="mu">Empresa ${c.status.toLowerCase()}</span>`:''}</td><td>${j.views}</td><td>${db.apps.filter(a=>a.jobId===j.id).length}</td><td class="nw">${fd(j.date)}</td><td class="nw">${fd(j.mod)}</td><td class="nw">${ibtn('edit','jedit',j.id,'Editar aviso')} ${ibtn('link','jpub',j.id,'Vista pública')}</td><td>${ssel('job',j.id,j.status)}</td></tr>${OPEN.has(k)?`<tr class="dt"><td colspan="9">${jobDetail(j)}</td></tr>`:''}`}).join('')||'<tr><td colspan="9" class="em">No hay datos disponibles</td></tr>'}</tbody></table></div>${foot}`}
+
+V.admin.postulaciones=()=>{EXP.app=()=>['postulaciones',['Nombre y apellido','Email','Identificador','DNI','Carrera','Aviso','Empresa','Fecha','CV','Estado'],appList().map(a=>{const u=usr(a.studentId),j=job(a.jobId);return[full(u),u?.email,u?.code,u?.dni,u?.career,j?.title,co(j?.companyId)?.name,fdt(a.date),u?.cvFile?.name||'Solo plantilla',a.status]})];
+ return toolbar({sel:`<select data-f="av" aria-label="Filtrar por aviso">${opt(db.jobs.filter(j=>db.apps.some(a=>a.jobId===j.id)).map(j=>[j.id,j.title]),F.av,'Filtrar por aviso')}</select>`+fsel('est',ST.app,'Filtrar por estado'),exp:'app'})+table(appTable)};
+const appList=()=>db.apps.filter(a=>{const u=usr(a.studentId),j=job(a.jobId);return hit(full(u)+' '+u?.email+' '+u?.code+' '+j?.title+' '+co(j?.companyId)?.name)&&inRange(a.date)&&(!F.av||a.jobId===+F.av)&&(!F.est||a.status===F.est)}).sort((a,b)=>b.date.localeCompare(a.date));
+function appTable(){const{items,foot}=paged(appList());
+ return `<div class="cb"><table><thead><tr><th>Nombre y Apellido</th><th>Email</th><th>Identificador</th><th>Aviso</th><th>Empresa</th><th>Fecha</th><th>CV</th><th>Estado</th></tr></thead><tbody>${items.map(a=>{const u=usr(a.studentId),j=job(a.jobId);
+ return `<tr><td><button class="lk" style="text-decoration:none;color:var(--tx);font-size:.82rem;font-weight:500" data-a="sview" data-id="${u?.id}">${esc(full(u))}</button><br><span class="mu">${esc(u?.career)}</span></td><td>${esc(u?.email)}</td><td class="nw">${esc(u?.code)}</td><td><div class="trunc" style="max-width:200px" title="${esc(j?.title)}">${esc(j?.title)}</div></td><td><div class="trunc" style="max-width:160px">${esc(co(j?.companyId)?.name)}</div></td><td class="nw">${fd(a.date)}</td><td class="nw">${u?cvBtn(u.id):'—'}</td><td>${ssel('app',a.id,a.status)}</td></tr>`}).join('')||'<tr><td colspan="8" class="em">No hay datos disponibles</td></tr>'}</tbody></table></div>${foot}`}
+
+V.admin.estudiantes=()=>{F.ap??='si';EXP.stu=()=>['estudiantes',['Nombre','Apellido','ID','DNI','Correo','Carrera','Ciclo','Postulaciones','Estado','Modificación'],stuList().map(u=>[u.first,u.last,u.code,u.dni,u.email,u.career,u.cycle,db.apps.filter(a=>a.studentId===u.id).length,u.status,fdt(u.mod)])];
+ return toolbar({dates:false,sel:`<select data-f="ap" aria-label="Mostrar"><option value="si" ${F.ap!=='todos'?'selected':''}>Solo con postulaciones</option><option value="todos" ${F.ap==='todos'?'selected':''}>Todos los registrados</option></select>`+fsel('car',db.cfg.careers,'Filtrar por carrera')+fsel('est',ST.stu,'Filtrar por estado'),exp:'stu'})+table(stuTable)};
+const stuList=()=>db.users.filter(u=>u.role==='student'&&(F.ap==='todos'||db.apps.some(a=>a.studentId===u.id))&&hit(full(u)+' '+u.code+' '+u.dni+' '+u.email)&&(!F.car||u.career===F.car)&&(!F.est||u.status===F.est)).sort((a,b)=>(b.mod||'').localeCompare(a.mod||''));
+function stuTable(){const{items,foot}=paged(stuList());
+ return `<div class="cb"><table><thead><tr><th></th><th>Nombre</th><th>Apellido</th><th>ID</th><th>Estado</th><th>Modificación</th><th>Acción</th></tr></thead><tbody>${items.map(u=>{const k='s'+u.id,ap=db.apps.filter(a=>a.studentId===u.id);
+ return `<tr>${xpBtn('s',u.id)}<td>${esc(u.first)}</td><td>${esc(u.last)}</td><td class="nw">${esc(u.code)}</td><td>${pill(u.status)}</td><td class="nw">${fdt(u.mod)}</td><td class="nw">${cvBtn(u.id)} ${ibtn('edit','sedit',u.id,'Editar alumno')}</td></tr>${OPEN.has(k)?`<tr class="dt"><td colspan="7"><div class="kv"><div><span>Correo</span>${esc(u.email)}</div><div><span>DNI</span>${esc(u.dni)}</div><div><span>Carrera</span>${esc(u.career)}</div><div><span>Ciclo</span>${esc(u.cycle)}</div><div><span>Teléfono</span>${esc(u.phone||'—')}</div><div><span>CV</span>${cvReady(u)?'Completo':'Incompleto'} · ${cvBtn(u.id)}</div></div><p class="mu" style="margin:.9rem 0 .3rem">Postulaciones (${ap.length})</p>${ap.map(a=>{const j=job(a.jobId);return `<div style="display:flex;justify-content:space-between;gap:.6rem;padding:.3rem 0;font-size:.8rem;border-top:1px solid var(--bd)"><span>${esc(j?.title)} <span class="mu">· ${esc(co(j?.companyId)?.name)} · ${fd(a.date)}</span></span>${pill(a.status)}</div>`}).join('')||'<span class="mu">Aún no postula</span>'}</td></tr>`:''}`}).join('')||'<tr><td colspan="7" class="em">No hay datos disponibles</td></tr>'}</tbody></table></div>${foot}`}
+
+V.admin.config=()=>{const c=db.cfg,T=[['info','Información'],['bolsa','Bolsa laboral'],['site','Micrositio']];if(!T.some(t=>t[0]===cfgTab))cfgTab='info';
+ return `<div class="cfg"><div class="card cfl"><div class="cp"><div class="lgbox">${SCL(64)}</div><h3>${esc(c.name)}</h3><div style="margin:.5rem 0 1rem"><span class="prem">${esc(c.plan)}</span></div><label class="btn g" style="margin:0;display:flex;cursor:pointer;color:var(--tx)">${ic('upload')} Seleccionar logo<input type="file" accept="image/*" data-up="logo" class="hidden"></label>${c.logo?`<button class="lk" data-a="rmLogo" style="margin-top:.5rem">Quitar logo</button>`:''}<div class="cfs"><div><b>${db.jobs.length}</b><span>AVISOS</span></div><div><b>${db.companies.length}</b><span>EMPRESAS</span></div><div><b>${new Set(db.apps.map(a=>a.studentId)).size}</b><span>POSTUL.</span></div></div><p class="mu" style="text-align:left;margin-top:.6rem"><b style="font-weight:500;color:var(--hd)">Acerca de ${esc(c.name)}</b><br>${esc(c.desc)}</p></div></div>
+<div class="card"><div class="tabs">${T.map(([k,l])=>`<button data-a="cfgTab" data-id="${k}" class="${cfgTab===k?'on':''}">${l}</button>`).join('')}</div><div class="cp">${CFG[cfgTab]()}</div></div></div>`};
+const CFG={
+info:()=>{const c=db.cfg;return `<form data-form="cfgInfo"><div class="g2"><div><label class="req">Nombre</label><input name="name" required value="${esc(c.name)}"></div><div><label>Nombre legal</label><input name="legal" value="${esc(c.legal)}"></div><div><label class="req">Email #1</label><input type="email" name="email1" required value="${esc(c.email1)}"></div><div><label>Email #2</label><input type="email" name="email2" placeholder="Email secundario" value="${esc(c.email2)}"></div><div><label>Fecha de registro</label><input disabled value="${fdt(c.created)} hs"></div><div><label>Última modificación</label><input disabled value="${fdt(c.mod)} hs"></div></div><div class="g4"><div><label>Teléfono #1</label><input name="phone1" value="${esc(c.phone1)}"></div><div><label>Teléfono #2</label><input name="phone2" placeholder="Teléfono secundario" value="${esc(c.phone2)}"></div><div><label>Teléfono #3</label><input name="phone3" placeholder="Otro teléfono" value="${esc(c.phone3)}"></div><div><label>RUC</label><input name="ruc" value="${esc(c.ruc)}"></div></div><div class="g2"><div><label>Dirección</label><input name="address" value="${esc(c.address)}"></div><div><label>Sitio web</label><input name="web" value="${esc(c.web)}"></div></div><label>Descripción</label><textarea name="desc" rows="4">${esc(c.desc)}</textarea><div class="mf"><button class="btn">Guardar cambios</button></div></form>`},
+bolsa:()=>{const c=db.cfg;return `<p class="mu" style="margin-bottom:.4rem">Carreras habilitadas. Las empresas solo pueden publicar avisos para estas carreras y los alumnos se registran con una de ellas.</p><div class="chips">${c.careers.map((k,i)=>`<span class="chip">${esc(k)}<button data-a="rmCar" data-id="${i}" aria-label="Quitar ${esc(k)}">${ic('x')}</button></span>`).join('')}</div><form data-form="addCar" style="display:flex;gap:.5rem;margin-top:.6rem"><input name="car" required placeholder="Ej.: Técnica en Nutrición" aria-label="Nueva carrera"><button class="btn sl">Agregar</button></form>
+<form data-form="cfgRules" style="margin-top:1.4rem;border-top:1px solid var(--bd);padding-top:.6rem"><label class="sw"><input type="checkbox" name="autoCompany" ${c.rules.autoCompany?'checked':''}><span>Aprobar automáticamente a las empresas nuevas<br><span class="mu">Si está desactivado, cada empresa registrada queda pendiente hasta que la apruebes.</span></span></label><label class="sw"><input type="checkbox" name="needCV" ${c.rules.needCV?'checked':''}><span>Exigir CV para postular<br><span class="mu">El alumno debe completar la plantilla (teléfono, perfil profesional y formación) o subir su CV en archivo.</span></span></label><label class="sw"><input type="checkbox" name="notifyApps" ${c.rules.notifyApps?'checked':''}><span>Notificarme cada nueva postulación<br><span class="mu">Las solicitudes de publicación y los registros de empresas siempre se notifican.</span></span></label><label class="sw" style="opacity:.75"><input type="checkbox" checked disabled><span>Los avisos de empresas requieren aprobación del administrador<br><span class="mu">Regla fija: ningún aviso es visible para los alumnos sin tu aprobación.</span></span></label><div class="mf"><button class="btn">Guardar configuración</button></div></form><div style="margin-top:1.4rem;border-top:1px solid var(--bd);padding-top:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap"><span class="mu">Para la prueba interna: vuelve a los datos de ejemplo.</span><button class="btn g" data-a="resetAsk">Restablecer datos de prueba</button></div>`},
+site:()=>{const s=db.cfg.site;return `<form data-form="cfgSite"><label class="sw"><input type="checkbox" name="public" ${s.public?'checked':''}><span>Publicar el portal de ofertas para alumnos<br><span class="mu">Los alumnos buscan ofertas aprobadas e ingresan con sus mismas credenciales.</span></span></label><label>Título del portal</label><input name="title" value="${esc(s.title)}"><label>Mensaje de bienvenida</label><textarea name="welcome" rows="2">${esc(s.welcome)}</textarea><label>Color de cabecera</label><input type="color" name="color" value="${esc(s.color)}" style="width:80px;height:38px;padding:2px"><div class="mf"><button class="btn g" type="button" data-a="portal" data-id="public">Ver portal de ofertas</button><button class="btn g" type="button" data-a="portal" data-id="company">Ver portal de empresas</button><button class="btn">Guardar micrositio</button></div></form>`},
+ga:()=>`<form data-form="cfgGA"><p class="mu">Conecta Google Analytics para medir las visitas al portal de ofertas.</p><label>ID de medición</label><input name="ga" placeholder="G-XXXXXXXXXX" value="${esc(db.cfg.ga)}" pattern="G-[A-Z0-9]{6,12}" title="Formato G-XXXXXXXXXX"><div class="mf"><button class="btn">Guardar</button></div></form>`,
+api:()=>{const a=db.cfg.api;return `<p class="mu">Integra la bolsa laboral con otros sistemas del instituto (por ejemplo, el sistema académico).</p><label class="sw"><input type="checkbox" data-a="apiTog" ${a.on?'checked':''}><span>Acceso por API ${a.on?'activado':'desactivado'}</span></label><label>Clave de API</label><div class="code">${esc(a.key)}</div><div class="mf"><button class="btn g" data-a="apiNew">Generar nueva clave</button></div>`}};
+
+/* ===================== ALUMNO ===================== */
+V.student.dash=()=>{const mine=db.apps.filter(a=>a.studentId===me.id).sort((a,b)=>b.date.localeCompare(a.date)),last=db.jobs.filter(vis).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+ const miss=db.cfg.rules.needCV&&!cvReady(me)?['CV']:[];
+ return `${miss.length?`<div class="note">Completa tu CV en “Mi perfil” (teléfono, perfil profesional y formación) o sube tu CV en archivo para poder postular. <button class="lk" data-a="tab" data-id="perfil">Ir a mi perfil</button></div>`:''}<h2 class="sec">Actividad reciente</h2><div class="sg">${statCard(db.jobs.filter(vis).length,'PUBLICACIONES','Avisos disponibles para postular','mega')}${statCard(db.companies.filter(c=>c.status==='Aprobada').length,'EMPRESAS','Empresas vinculadas a la bolsa','building')}${statCard(mine.length,'MIS POSTULACIONES',mine.filter(a=>['Postulado','En revisión','Entrevista'].includes(a.status)).length+' en proceso','users')}</div>
+<div class="ch" style="border:0;padding:0 0 .7rem"><h2 class="sec" style="margin:0">Últimas publicaciones</h2><button class="lk" data-a="tab" data-id="avisos">Ver todas</button></div>
+<div class="card">${last.map(j=>{const c=co(j.companyId);return `<div class="lr">${logo(c)}<div class="tt">${esc(c.name)} – ${esc(j.title)} – ${esc(city(j))}<small>${esc(j.career)} · Publicado ${fd(j.date)}</small></div><div class="ac">${ibtn('eye','jview',j.id,'Ver aviso')}${stuApplied(j.id)?pill('Postulado'):`<button class="btn sm" data-a="apply" data-id="${j.id}">Postular</button>`}</div></div>`}).join('')||'<div class="em">Aún no hay publicaciones</div>'}</div>
+<div class="ch" style="border:0;padding:0 0 .7rem"><h2 class="sec" style="margin:0">Mis postulaciones recientes</h2><button class="lk" data-a="tab" data-id="postulaciones">Ver todas</button></div>
+<div class="tbw"><div class="cb"><table><thead><tr><th>Aviso</th><th>Empresa</th><th>Fecha</th><th>Estado</th></tr></thead><tbody>${mine.slice(0,5).map(a=>{const j=job(a.jobId);return `<tr><td>${esc(j?.title)}</td><td>${esc(co(j?.companyId)?.name)}</td><td class="nw">${fd(a.date)}</td><td>${pill(a.status)}</td></tr>`}).join('')||'<tr><td colspan="4" class="em">Aún no postulas. Revisa los avisos disponibles.</td></tr>'}</tbody></table></div></div>`};
+
+V.student.empresas=()=>toolbar({dates:false,sel:fsel('sec',[...new Set(db.companies.filter(c=>c.status==='Aprobada').map(c=>c.sector))].sort(),'Filtrar por rubro')})+table(()=>{const{items,foot}=paged(db.companies.filter(c=>c.status==='Aprobada'&&hit(c.name+' '+c.city)&&(!F.sec||c.sector===F.sec)).sort((a,b)=>a.name.localeCompare(b.name)));
+ return `<div class="cb"><table><thead><tr><th>Empresa</th><th>Rubro</th><th>Ubicación</th><th>Avisos disponibles</th></tr></thead><tbody>${items.map(c=>`<tr><td style="display:flex;gap:.7rem;align-items:center">${logo(c)}<span style="font-weight:500">${esc(c.name)}</span></td><td>${esc(c.sector)}</td><td>${esc(c.city)}, ${esc(c.country)}</td><td>${db.jobs.filter(j=>j.companyId===c.id&&vis(j)).length}</td></tr>`).join('')||'<tr><td colspan="4" class="em">No hay datos disponibles</td></tr>'}</tbody></table></div>${foot}`});
+
+const TYPES=['Empleo','Prácticas pre-profesionales','Prácticas profesionales'];
+const SORTS={rec:['Más recientes',(a,b)=>b.date.localeCompare(a.date)],sal:['Mayor remuneración',(a,b)=>(+b.salary||0)-(+a.salary||0)],cie:['Cierre más próximo',(a,b)=>(a.deadline||'').localeCompare(b.deadline||'')]};
+const stuJobs=()=>db.jobs.filter(j=>vis(j)&&hit(j.title+' '+co(j.companyId).name+' '+j.desc+' '+j.place+' '+j.career)&&(!F.typ||j.type===F.typ)&&(!F.cty||city(j)===F.cty)&&(!F.car||j.career===F.car)&&(!F.mine||!stuApplied(j.id))).sort((SORTS[F.sort]||SORTS.rec)[1]);
+const daysLeft=d=>Math.round((new Date(d+'T00:00')-new Date(today()+'T00:00'))/864e5);
+const jobCard=j=>{const c=co(j.companyId),n=daysLeft(j.deadline);
+ return `<article class="of"><div class="oh">${logo(c)}<div><h3>${esc(j.title)}</h3><div class="co">${esc(c.name)}</div></div></div>
+<div class="mt"><span class="tag t1">${esc(j.type)}</span><span class="tag">${esc(j.career)}</span><span class="tag">${esc(j.mode)}</span></div>
+<div class="meta"><span>${ic('pin')} ${esc(j.place)}</span><span class="${n<0?'late':''}">${ic('cal')} ${n<0?'Plazo vencido':n===0?'Cierra hoy':'Cierra en '+n+(n===1?' día':' días')}</span><span>${ic('users')} ${esc(j.vacancies)} ${+j.vacancies===1?'vacante':'vacantes'}</span></div>
+<div class="bt"><b>${money(j.salary)}</b><div style="display:flex;gap:.45rem"><button class="btn sm g" data-a="jview" data-id="${j.id}">Ver detalle</button>${stuApplied(j.id)?pill('Postulado'):`<button class="btn sm" data-a="apply" data-id="${j.id}">Postular</button>`}</div></div></article>`};
+V.student.avisos=()=>{const cities=[...new Set(db.jobs.filter(vis).map(city))].sort();
+ return `<section class="hero stu"><h1>Hola, ${esc(me.first)}</h1><p>Estas son las ofertas aprobadas por la bolsa laboral. Busca por tipo de empleo y ubicación, y postula desde aquí.</p></section>
+<div class="wrap wide"><div class="card search"><div class="cp"><div class="sgrid">
+<div class="sf k"><label for="sq">Puesto o palabra clave</label><div class="iw">${ic('search')}<input id="sq" data-f="q" placeholder="Enfermería, farmacia, laboratorio…" value="${esc(F.q||'')}" autocomplete="off"></div></div>
+<div class="sf"><label for="st">Tipo de empleo</label><select id="st" data-f="typ">${opt(TYPES,F.typ,'Todos')}</select></div>
+<div class="sf"><label for="sc">Ubicación</label><select id="sc" data-f="cty">${opt(cities,F.cty,'Todas')}</select></div>
+<div class="sf"><label for="sr">Carrera</label><select id="sr" data-f="car">${opt(db.cfg.careers,F.car,'Todas')}</select></div></div>
+<div class="chiprow">${['',...TYPES].map(t=>`<button class="qchip ${(F.typ||'')===t?'on':''}" data-a="qtyp" data-id="${esc(t)}" aria-pressed="${(F.typ||'')===t}">${t||'Todas las ofertas'}</button>`).join('')}<button class="qchip ${F.car===me.career?'on':''}" data-a="qcar" aria-pressed="${F.car===me.career}">Solo mi carrera</button><span class="sp"></span><button class="lk" data-a="clearF">Limpiar filtros</button></div></div></div>
+<div id="tw">${stuResults()}</div></div>`};
+function stuResults(){curT=stuResults;const l=stuJobs();
+ return `<div class="rh"><span><b>${l.length}</b> ${l.length===1?'oferta encontrada':'ofertas encontradas'}</span><label class="sw"><input type="checkbox" data-a="togMine" ${F.mine?'checked':''}> Ocultar las que ya postulé</label><select data-f="sort" aria-label="Ordenar">${Object.entries(SORTS).map(([k,v])=>`<option value="${k}" ${(F.sort||'rec')===k?'selected':''}>${v[0]}</option>`).join('')}</select></div>
+${l.length?`<div class="offers">${l.map(jobCard).join('')}</div>`:`<div class="card"><div class="cp em">No hay ofertas con esos filtros. Prueba con otra ubicación o tipo de empleo.<br><button class="btn g" style="margin-top:.9rem" data-a="clearF">Limpiar filtros</button></div></div>`}`}
+
+V.student.postulaciones=()=>toolbar({sel:fsel('est',ST.app,'Filtrar por estado')})+table(()=>{const{items,foot}=paged(db.apps.filter(a=>a.studentId===me.id&&inRange(a.date)&&(!F.est||a.status===F.est)&&hit(job(a.jobId)?.title+' '+co(job(a.jobId)?.companyId)?.name)).sort((a,b)=>b.date.localeCompare(a.date)));
+ return `<div class="cb"><table><thead><tr><th>Aviso</th><th>Empresa</th><th>Fecha</th><th>Última actualización</th><th>Estado</th><th>Acción</th></tr></thead><tbody>${items.map(a=>{const j=job(a.jobId);return `<tr><td style="font-weight:500">${esc(j?.title)}</td><td>${esc(co(j?.companyId)?.name)}</td><td class="nw">${fd(a.date)}</td><td class="nw">${fdt(a.mod)}</td><td>${pill(a.status)}</td><td class="nw">${ibtn('eye','jview',j?.id,'Ver aviso')} ${a.status==='Postulado'?`<button class="btn sm g" data-a="retire" data-id="${a.id}">Retirar</button>`:''}</td></tr>`}).join('')||'<tr><td colspan="6" class="em">No se encontraron registros</td></tr>'}</tbody></table></div>${foot}`});
+
+const PROF_LISTS={edu:[['inst','Institución',3],['prog','Carrera o nivel',3],['from','Desde',1,'2024'],['to','Hasta',1,'2026'],['status','Estado',4,'Cursando 6.º ciclo']],
+ exp:[['place','Centro de prácticas o empresa',3],['role','Puesto o área',3,'Practicante de Enfermería – Tópico'],['from','Desde',1,'Mar 2026'],['to','Hasta',1,'Jul 2026'],['desc','Funciones realizadas',4,'',1]],
+ courses:[['name','Curso o certificación',3],['inst','Institución',2],['year','Año',1,'2025']],
+ langs:[['lang','Idioma',3,'Inglés'],['level','Nivel',3,'',0,['Básico','Intermedio','Avanzado','Nativo']]]};
+function applyProfile(form){const fd=new FormData(form),d={};for(const[k,v]of fd.entries())d[k]=v;
+ ['first','last','phone','career','cycle','about','district','avail','shift','skills'].forEach(k=>{if(d[k]!==undefined)me[k]=String(d[k]).trim()});
+ Object.keys(PROF_LISTS).forEach(sec=>{const out=[];Object.keys(d).forEach(k=>{const m=k.match(new RegExp('^'+sec+'-(\\d+)-(\\w+)$'));if(m){(out[+m[1]]??={})[m[2]]=String(d[k]).trim()}});me[sec]=Array.from(out,x=>x||{})});
+ return d}
+const rowsOf=sec=>`<div data-sec="${sec}">${(me[sec]||[]).map((r,i)=>`<div class="rr">${PROF_LISTS[sec].map(([k,l,w,ph,ta,sel])=>`<div style="grid-column:span ${w}"><label for="${sec}-${i}-${k}">${l}</label>${ta?`<textarea id="${sec}-${i}-${k}" name="${sec}-${i}-${k}" rows="2" placeholder="${esc(ph||'')}">${esc(r[k])}</textarea>`:sel?`<select id="${sec}-${i}-${k}" name="${sec}-${i}-${k}">${sel.map(o=>`<option ${o===r[k]?'selected':''}>${o}</option>`).join('')}</select>`:`<input id="${sec}-${i}-${k}" name="${sec}-${i}-${k}" value="${esc(r[k])}" placeholder="${esc(ph||'')}">`}</div>`).join('')}<button type="button" class="ib rrx" data-a="rmRow" data-id="${sec}:${i}" title="Quitar" aria-label="Quitar esta fila">${ic('x')}</button></div>`).join('')||'<p class="mu" style="margin:.5rem 0">Aún no agregas registros.</p>'}</div>`;
+const addBtn=(sec,t)=>`<button type="button" class="btn sm g addr" data-a="addRow" data-id="${sec}">+ ${t}</button>`;
+V.student.perfil=()=>{const pc=cvPct(me),ok=cvReady(me);
+ return `<div class="card" style="max-width:920px"><div class="cp pf-top"><div style="flex:1;min-width:220px"><div style="display:flex;justify-content:space-between;font-size:.86rem;margin-bottom:.4rem"><span style="color:var(--hd);font-weight:500">Tu CV está ${pc}% completo</span>${ok?pill('Listo para postular'):pill('Pendiente')}</div><div class="prog"><b style="width:${pc}%"></b></div><p class="mu" style="margin-top:.45rem">${hasFile(me)?'Tienes un CV en archivo subido. ':''}La bolsa laboral y las empresas a las que postules verán tu CV con estos datos${hasFile(me)?' y tu archivo':''}.</p></div><button class="btn g" data-a="cvPreview">${ic('eye')} Vista previa de mi CV</button></div></div>
+<div class="card form" style="max-width:920px"><div class="cp"><form data-form="profile">
+<h3>Datos personales</h3><div class="g2"><div><label class="req">Nombres</label><input name="first" required value="${esc(me.first)}"></div><div><label class="req">Apellidos</label><input name="last" required value="${esc(me.last)}"></div><div><label>Identificador</label><input disabled value="${esc(me.code)}"></div><div><label>DNI</label><input disabled value="${esc(me.dni)}"></div><div><label>Correo</label><input disabled value="${esc(me.email)}"></div><div><label class="req">Teléfono</label><input name="phone" value="${esc(me.phone)}" placeholder="987 654 321"></div><div><label>Distrito de residencia</label><input name="district" value="${esc(me.district)}" placeholder="San Juan de Miraflores, Lima"></div><div class="g2" style="gap:0 .9rem"><div><label class="req">Carrera</label><select name="career">${db.cfg.careers.map(c=>`<option ${c===me.career?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div><label>Ciclo</label><select name="cycle">${['1','2','3','4','5','6','Egresado'].map(c=>`<option ${c===me.cycle?'selected':''}>${c}</option>`).join('')}</select></div></div></div>
+<h3>Perfil profesional</h3><label class="req" for="about">Preséntate en 2 o 3 líneas</label><textarea id="about" name="about" rows="3" placeholder="Estudiante de Enfermería Técnica con prácticas en tópico…">${esc(me.about)}</textarea>
+<h3>Formación académica</h3>${rowsOf('edu')}${addBtn('edu','Agregar formación')}
+<h3>Experiencia y prácticas</h3>${rowsOf('exp')}${addBtn('exp','Agregar experiencia')}
+<h3>Cursos y certificaciones</h3>${rowsOf('courses')}${addBtn('courses','Agregar curso')}
+<h3>Habilidades e idiomas</h3><label for="skills">Habilidades (separadas por comas)</label><input id="skills" name="skills" value="${esc(me.skills)}" placeholder="Control de funciones vitales, Curaciones, Bioseguridad">${rowsOf('langs')}${addBtn('langs','Agregar idioma')}
+<h3>Disponibilidad</h3><div class="g2"><div><label>Inicio</label><select name="avail">${['Inmediata','En 15 días','En 30 días','Al terminar el ciclo'].map(o=>`<option ${o===me.avail?'selected':''}>${o}</option>`).join('')}</select></div><div><label>Horario</label><select name="shift">${['Mañana','Tarde','Noche','Turnos rotativos','Fines de semana'].map(o=>`<option ${o===me.shift?'selected':''}>${o}</option>`).join('')}</select></div></div>
+<h3>CV en archivo (opcional)</h3><p class="mu">Además de la plantilla, puedes subir tu propio CV. Si lo haces, la bolsa laboral y las empresas a las que postules podrán verlo y descargarlo. Con el archivo subido ya puedes postular aunque la plantilla esté incompleta.</p>
+${me.cvFile?`<div class="fcard">${ic('clip')}<div style="flex:1;min-width:180px"><b style="font-weight:500;color:var(--hd);word-break:break-all">${esc(me.cvFile.name)}</b><br><span class="mu">${kb(me.cvFile.size)} · subido el ${fdt(me.cvFile.date)}</span></div><button type="button" class="btn sm g" data-a="cvTab" data-id="${me.id}:file">Ver</button><label class="btn sm g" style="margin:0;cursor:pointer;color:var(--tx)">Reemplazar<input type="file" class="hidden" data-up="cvfile" accept=".pdf,.docx,.jpg,.jpeg,.png"></label><button type="button" class="btn sm no" data-a="cvRm">Quitar</button></div>`:`<label class="drop">${ic('upload')}<span><b style="font-weight:500;color:var(--hd)">Subir mi CV</b><br><span class="mu">PDF, Word (.docx) o imagen JPG/PNG · máximo 1.5 MB</span></span><input type="file" class="hidden" data-up="cvfile" accept=".pdf,.docx,.jpg,.jpeg,.png"></label>`}
+<h3>Seguridad</h3><div class="g2"><div><label>Nueva contraseña (opcional)</label><input type="password" name="password" minlength="6" autocomplete="new-password"></div></div>
+<div class="mf"><button type="button" class="btn g" data-a="cvPreview">${ic('eye')} Vista previa</button><button class="btn">Guardar perfil</button></div></form></div></div>`};
+
+/* ===================== EMPRESA ===================== */
+V.company.alta=()=>jobForm({});
+function jobForm(j,adm){const edit=!!j.id;return `<div class="card form"><div class="cp"><form data-form="${adm?'jobAdmin':'jobSave'}">${edit?`<input type="hidden" name="id" value="${j.id}">`:''}<h3>Datos del puesto</h3><label class="req">Nombre del puesto</label><input name="title" required maxlength="90" placeholder="Ej.: Técnico(a) en Enfermería – Hospitalización" value="${esc(j.title)}"><div class="g3"><div><label class="req">Carrera</label><select name="career" required>${db.cfg.careers.map(c=>`<option ${c===j.career?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div><label class="req">Tipo</label><select name="type">${['Empleo','Prácticas pre-profesionales','Prácticas profesionales'].map(c=>`<option ${c===j.type?'selected':''}>${c}</option>`).join('')}</select></div><div><label class="req">Modalidad</label><select name="mode">${['Presencial','Híbrido','Remoto'].map(c=>`<option ${c===j.mode?'selected':''}>${c}</option>`).join('')}</select></div></div>
+<div class="g4"><div style="grid-column:span 2"><label class="req">Lugar (distrito, ciudad)</label><input name="place" required placeholder="Miraflores, Lima" value="${esc(j.place)}"></div><div><label class="req">Vacantes</label><input type="number" name="vacancies" min="1" required value="${esc(j.vacancies||1)}"></div><div><label>Remuneración (S/)</label><input type="number" name="salary" min="0" placeholder="0 = a tratar" value="${esc(j.salary||'')}"></div></div>
+<div class="g4"><div><label class="req">Fecha límite</label><input type="date" name="deadline" required ${adm?'':`min="${today()}"`} value="${esc(j.deadline)}"></div></div>
+<h3>Descripción</h3><label class="req">Funciones</label><textarea name="desc" rows="4" required>${esc(j.desc)}</textarea><label>Requisitos</label><textarea name="reqs" rows="3">${esc(j.reqs)}</textarea><label>Beneficios</label><textarea name="perks" rows="2">${esc(j.perks)}</textarea>
+<div class="mf">${edit?`<button type="button" class="btn g" data-a="close">Cancelar</button>`:''}<button class="btn ${adm?'':'tl'}">${adm?'Guardar cambios':ic('send')+' '+(edit?'Reenviar solicitud':'Enviar solicitud de publicación')}</button></div></form></div></div>`}
+
+V.company.gestor=()=>{const js=db.jobs.filter(j=>j.companyId===me.companyId),ap=db.apps.filter(a=>js.some(j=>j.id===a.jobId));
+ return `<div class="sg">${statCard(js.filter(vis).length,'AVISOS PUBLICADOS','Visibles para los alumnos','mega')}${statCard(js.filter(j=>j.status==='Pendiente').length,'EN REVISIÓN','Esperando aprobación','file')}${statCard(ap.length,'POSTULACIONES','Total recibidas en tus avisos','users')}${statCard(ap.filter(a=>a.status==='Postulado').length,'NUEVAS','Aún sin revisar','bell')}</div>
+<div class="tool" style="margin-top:0"><input class="q" data-f="q" placeholder="Buscar aviso" value="${esc(F.q||'')}" aria-label="Buscar" style="background:var(--card);color:var(--tx);border:1px solid var(--bd)"><select data-f="est" aria-label="Estado" style="background:var(--card);color:var(--tx);border:1px solid var(--bd)">${opt(ST.job,F.est,'Todos los estados')}</select><span class="sp"></span><button class="btn tl" data-a="tab" data-id="alta">${ic('send')} Nuevo aviso</button></div>`+table(()=>{const{items,foot}=paged(js.filter(j=>hit(j.title)&&(!F.est||j.status===F.est)).sort((a,b)=>b.date.localeCompare(a.date)));
+ return `<div class="cb"><table><thead><tr><th></th><th>Aviso</th><th>Vistas</th><th>Postulaciones</th><th>Solicitud</th><th>Estado</th><th>Acción</th></tr></thead><tbody>${items.map(j=>{const k='j'+j.id,la=db.apps.filter(a=>a.jobId===j.id).sort((a,b)=>b.date.localeCompare(a.date)),nw=la.filter(a=>a.status==='Postulado').length;
+ return `<tr>${xpBtn('j',j.id)}<td><div style="font-weight:500;color:var(--hd)">${esc(j.title)}</div><span class="mu">${esc(j.career)} · ${esc(j.place)}</span></td><td>${j.views}</td><td>${la.length?`<button class="cnt" data-a="xp" data-id="${k}" aria-expanded="${OPEN.has(k)}">${ic('users')} ${la.length}${nw?`<span class="new">${nw} ${nw===1?'nueva':'nuevas'}</span>`:''}</button>`:'<span class="cnt z">0</span>'}</td><td class="nw">${fd(j.date)}</td><td>${pill(j.status)}</td><td class="nw">${['Pendiente','Rechazada'].includes(j.status)?ibtn('edit','jcedit',j.id,'Editar y reenviar'):''}${j.status==='Aprobada'?` <button class="btn sm g" data-a="jfin" data-id="${j.id}">Finalizar</button>`:''}</td></tr>
+ ${OPEN.has(k)?`<tr class="dt"><td colspan="7"><p style="font-weight:500;color:var(--hd);margin-bottom:.5rem">Postulaciones (${la.length})</p>${la.length?`<div class="cb"><table class="sub-t"><thead><tr><th>Alumno</th><th>Carrera y ciclo</th><th>Contacto</th><th>Fecha</th><th>Estado</th><th>CV</th></tr></thead><tbody>${la.map(a=>{const u=usr(a.studentId);return `<tr><td style="font-weight:500;color:var(--hd)">${esc(full(u))}</td><td>${esc(u?.career)}<br><span class="mu">${u?.cycle==='Egresado'?'Egresado(a)':'Ciclo '+esc(u?.cycle)}</span></td><td>${esc(u?.email)}<br><span class="mu">${esc(u?.phone||'')}</span></td><td class="nw">${fd(a.date)}</td><td>${pill(a.status)}</td><td class="nw">${cvBtn(u?.id)}</td></tr>`}).join('')}</tbody></table></div>`:'<p class="mu" style="margin-bottom:.8rem">Aún no hay postulaciones para este aviso.</p>'}<details><summary class="lk" style="cursor:pointer;margin-bottom:.6rem">Ver detalle del aviso</summary>${jobDetail(j)}</details></td></tr>`:''}`}).join('')||'<tr><td colspan="7" class="em">Aún no envías avisos. Usa “Alta de Avisos” para registrar tu primera convocatoria.</td></tr>'}</tbody></table></div>${foot}`})};
+
+V.company.empresa=()=>{const c=co(me.companyId);return `<div class="card form"><div class="cp"><form data-form="coSave"><h3>Datos de la empresa ${pill(c.status)}</h3><div class="g2"><div><label class="req">Razón social</label><input name="name" required value="${esc(c.name)}"></div><div><label class="req">RUC</label><input name="ruc" required value="${esc(c.ruc)}"></div><div><label>Rubro</label><select name="sector">${['Clínica','Hospital','Policlínico','Botica / Farmacia','Laboratorio clínico','Rehabilitación','Salud mental','Óptica','Empresa (área administrativa)','Otro'].map(s=>`<option ${s===c.sector?'selected':''}>${s}</option>`).join('')}</select></div><div><label>País</label><select name="country">${['Perú','Chile','Colombia','Ecuador','Bolivia'].map(s=>`<option ${s===c.country?'selected':''}>${s}</option>`).join('')}</select></div><div><label>Ciudad</label><input name="city" value="${esc(c.city)}"></div><div><label>Dirección</label><input name="address" value="${esc(c.address)}"></div></div><h3>Contacto</h3><div class="g3"><div><label class="req">Persona de contacto</label><input name="contact" required value="${esc(c.contact)}"></div><div><label class="req">Teléfono</label><input name="phone" required value="${esc(c.phone)}"></div><div><label>Correo de usuario</label><input disabled value="${esc(me.email)}"></div></div><div class="mf"><button class="btn tl">${c.status==='Rechazada'?'Guardar y solicitar nueva revisión':'Guardar cambios'}</button></div></form></div></div>`};
+
+/* =========================================================
+   DIBUJO PRINCIPAL
+   ========================================================= */
+function draw(){try{drawInner();ss.set('scl_F',JSON.stringify(F))}catch(e){console.error(e);curT=null;$('#root').innerHTML=`<div class="wrap flat"><div class="card"><div class="cp"><p style="font-weight:500;color:var(--hd)">No se pudo mostrar esta pantalla.</p><p class="mu" style="margin-top:.3rem">Vuelve al inicio. Si el problema sigue, restablece los datos de prueba.</p><div class="mf"><button class="btn g" data-a="resetAsk">Restablecer datos de prueba</button><button class="btn" data-a="safeHome">Volver al inicio</button></div></div></div></div>`}}
+function drawInner(){const root=$('#root');curT=null;document.documentElement.dataset.brand=portal==='company'?'emp':'scl';document.documentElement.dataset.head=(portal==='campus'&&me)?'dark':'light';ss.set('scl_portal',portal==='company'?'empresas':portal==='public'?'ofertas':'campus');if(me)ss.set('scl_tab',tab);
+ if(portal==='public'){root.innerHTML=publicPortal();curT=()=>offersGrid(db.jobs.filter(vis).filter(j=>hit(j.title+' '+co(j.companyId).name+' '+j.desc+' '+j.place)&&(!F.car||j.career===F.car)&&(!F.typ||j.type===F.typ)&&(!F.cty||city(j)===F.cty)).sort((a,b)=>b.date.localeCompare(a.date)));return}
+ if(!me){root.innerHTML=portal==='company'?authCompany():authCampus();return}
+ root.innerHTML=me.role==='company'?companyApp():campusApp()}
+const go=t=>{tab=t;F={};OPEN.clear();bellOpen=false;draw();window.scrollTo(0,0)};
+function enter(u){me=u;ss.set(SK,String(u.id));tab=u.role==='company'?'alta':'dash';F={};OPEN.clear();draw();window.scrollTo(0,0)}
+function login(email,pw){const u=db.users.find(x=>x.email===email.trim().toLowerCase());if(!u||u.password!==pw)return[null,'Correo o contraseña incorrectos.'];if(u.role==='student'&&u.status==='Inactivo')return[null,'Tu cuenta está inactiva. Comunícate con la bolsa laboral.'];return[u]}
+const withLoad=fn=>{$('#load').classList.remove('hidden');setTimeout(()=>{$('#load').classList.add('hidden');fn()},450)};
+
+/* ---------- cambios de estado ---------- */
+function setStatus(k,id,v,note){
+ if(k==='co'){const c=co(id);c.status=v;c.mod=now();if(note!==undefined)c.note=note;toast('Empresa '+v.toLowerCase())}
+ if(k==='job'){const j=job(id);j.status=v;j.mod=now();if(note!==undefined)j.note=note;toast(v==='Aprobada'&&co(j.companyId).status!=='Aprobada'?'Aviso aprobado. Será visible cuando apruebes la empresa.':'Aviso: '+v.toLowerCase())}
+ if(k==='app'){const a=db.apps.find(x=>x.id===+id);a.status=v;a.mod=now();toast('Postulación: '+v.toLowerCase())}
+ save();close();draw()}
+function askReject(k,id,v){const o=k==='co'?co(id):job(id);modal('Rechazar '+(k==='co'?'empresa':'aviso'),`<p><b style="font-weight:500">${esc(o.name||o.title)}</b></p><label>Motivo (lo verá la empresa)</label><textarea id="why" rows="3" placeholder="Ej.: Falta indicar horario y remuneración">${esc(o.note||'')}</textarea><div class="mf"><button class="btn g" data-a="close">Cancelar</button><button class="btn no" data-a="doReject" data-id="${id}" data-k="${k}" data-v="${v}">Rechazar</button></div>`)}
+
+/* ---------- acciones ---------- */
+const A={
+ tab:id=>go(id),close,bd:(i,e)=>{if(e.target.classList.contains('mb'))close()},
+ portal:id=>{close();F={};OPEN.clear();bellOpen=false;tab='dash';setPortal(id==='public'?'public':id==='company'?'company':'campus');if(me&&me.role==='company')tab='alta';draw()},
+ regmode:()=>{regMode=!regMode;draw()},
+ theme:()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;r.dataset.theme=d?'light':'dark'},
+ logout:()=>{const back=me.role==='company'?'company':'campus';ss.del(SK);bellOpen=false;F={};OPEN.clear();tab='dash';setPortal(back)},
+ pg:id=>{F.page=+id;refresh()},
+ xp:id=>{OPEN.has(id)?OPEN.delete(id):OPEN.add(id);refresh()},
+ exp:id=>exportCSV(id),
+ bell:()=>{bellOpen=!bellOpen;draw()},
+ readAll:()=>{db.notes.forEach(n=>n.read=true);save();draw()},
+ note:id=>{const n=db.notes.find(x=>x.id===+id);n.read=true;save();bellOpen=false;if(n.go){tab=n.go[0];F={};OPEN.clear();OPEN.add((n.go[0]==='empresas'?'c':'j')+n.go[1])}draw()},
+ jview:id=>{const j=job(id);if(!j)return;if(me?.role==='student'){j.views++;save()}const c=co(j.companyId);modal(esc(j.title),`<div class="oh" style="margin-bottom:1.1rem">${logo(c)}<div><div style="font-weight:500">${esc(c?.name)}</div><div class="mu">${esc(c?.sector||'')} · ${esc(c?.city||'')}</div></div></div>`+jobDetail(j)+(me?.role==='student'?`<div class="mf">${stuApplied(j.id)?pill('Ya postulaste'):`<button class="btn" data-a="apply" data-id="${j.id}">Postular</button>`}</div>`:`<div class="mf">${pill(j.status)}</div>`),true)},
+ jpub:id=>{const j=job(id),c=co(j.companyId);modal('Vista pública del aviso',`${vis(j)?'':`<div class="note">Este aviso aún no es visible para los alumnos (${j.status!=='Aprobada'?'aviso '+j.status.toLowerCase():'empresa '+c.status.toLowerCase()}).</div>`}<article class="of" style="box-shadow:none"><h3>${esc(j.title)}</h3><div class="co">${esc(c.name)}</div><div class="mt"><span class="tag">${esc(j.career)}</span><span class="tag">${esc(j.type)}</span></div><div class="mu">${ic('pin')} ${esc(j.place)} · Hasta el ${fd(j.deadline)}</div><p style="font-size:.84rem">${esc(j.desc)}</p><div class="bt"><b style="font-weight:500">${money(j.salary)}</b><span class="btn sm tl" aria-disabled="true">Ver y postular</span></div></article>`)},
+ jedit:id=>modal('Editar aviso',jobForm(job(id),true),true),
+ jcedit:id=>modal('Editar y reenviar aviso',jobForm(job(id)),true),
+ jfin:id=>{modal('Finalizar aviso',`<p>El aviso <b style="font-weight:500">${esc(job(id).title)}</b> dejará de mostrarse a los alumnos. Las postulaciones recibidas se conservan.</p><div class="mf"><button class="btn g" data-a="close">Cancelar</button><button class="btn no" data-a="jfin2" data-id="${id}">Finalizar aviso</button></div>`)},
+ jfin2:id=>{const j=job(id);j.status='Finalizada';j.mod=now();save();close();draw();toast('Aviso finalizado')},
+ cview:id=>{const c=co(id);modal(esc(c.name),coDetail(c,coStats(c))+`<div class="mf">${ssel('co',c.id,c.status)}</div>`,true)},
+ sview:id=>{const u=usr(id);modal(esc(full(u)),`<div class="kv"><div><span>Identificador</span>${esc(u.code)}</div><div><span>DNI</span>${esc(u.dni)}</div><div><span>Correo</span>${esc(u.email)}</div><div><span>Teléfono</span>${esc(u.phone||'—')}</div><div><span>Carrera</span>${esc(u.career)}</div><div><span>Ciclo</span>${esc(u.cycle)}</div><div><span>Estado</span>${pill(u.status)}</div></div>${u.about?`<p style="margin-top:.9rem;font-size:.86rem">${esc(u.about)}</p>`:''}<div class="mf">${cvBtn(u.id)}</div>`)},
+ sedit:id=>{const u=usr(id);modal('Editar alumno',`<form data-form="stuAdmin"><input type="hidden" name="id" value="${u.id}"><div class="g2"><div><label class="req">Nombres</label><input name="first" required value="${esc(u.first)}"></div><div><label class="req">Apellidos</label><input name="last" required value="${esc(u.last)}"></div><div><label>Identificador</label><input name="code" value="${esc(u.code)}"></div><div><label>DNI</label><input name="dni" value="${esc(u.dni)}"></div><div><label>Carrera</label><select name="career">${db.cfg.careers.map(c=>`<option ${c===u.career?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div><label>Estado</label><select name="status">${ST.stu.map(s=>`<option ${s===u.status?'selected':''}>${s}</option>`).join('')}</select></div></div><p class="mu" style="margin-top:.7rem">Un alumno inactivo no puede iniciar sesión ni postular.</p><div class="mf"><button type="button" class="btn g" data-a="close">Cancelar</button><button class="btn">Guardar</button></div></form>`)},
+ cv:(id,e,want)=>{const u=usr(id);if(!u||!me)return;
+  if(me.role==='company'&&!db.apps.some(a=>a.studentId===u.id&&job(a.jobId)?.companyId===me.companyId))return toast('Solo puedes ver los CV de quienes postularon a tus avisos.',1);
+  if(me.role==='student'&&u.id!==me.id)return;
+  const f=hasFile(u)?getFile(u.id):null,show=f&&(want==='file'||(!want&&!tplReady(u)))?'file':'tpl';
+  const seg=f?`<div class="seg2" role="tablist" aria-label="Tipo de CV"><button role="tab" aria-selected="${show==='tpl'}" class="${show==='tpl'?'on':''}" data-a="cvTab" data-id="${u.id}:tpl">${ic('file')} Plantilla</button><button role="tab" aria-selected="${show==='file'}" class="${show==='file'?'on':''}" data-a="cvTab" data-id="${u.id}:file">${ic('clip')} Archivo subido</button></div>`:'';
+  let body;
+  if(show==='file'){const img=/^image\//.test(f.type),pdf=/pdf/i.test(f.type)||/\.pdf$/i.test(f.name);
+   body=`<div class="mf" style="margin:0 0 1rem;justify-content:space-between;align-items:center"><span class="mu" style="word-break:break-all">${ic('clip')} ${esc(f.name)} · ${kb(f.size)} · subido el ${fdt(f.date)}</span><button class="btn sm" data-a="cvFileDown" data-id="${u.id}">${ic('down')} Descargar archivo</button></div>${img?`<img src="${f.data}" alt="CV de ${esc(full(u))}" style="width:100%;border:1px solid var(--bd);border-radius:8px;background:#fff">`:pdf?`<p class="mu" style="margin:-.4rem 0 .6rem">Si la vista previa no carga en este navegador, usa “Descargar archivo”.</p><iframe id="cvframe" title="CV de ${esc(full(u))}" style="width:100%;height:62vh;border:1px solid var(--bd);border-radius:8px;background:#fff"></iframe>`:`<div class="note">Los archivos de Word no se pueden mostrar aquí. Usa “Descargar archivo” para abrirlo.</div>`}`}
+  else body=`<div class="mf" style="margin:0 0 1rem;justify-content:space-between;align-items:center"><span class="${tplReady(u)?'mu':'pill pe'}">${tplReady(u)?'Plantilla generada con los datos de Mi perfil':'Plantilla incompleta: faltan teléfono, perfil profesional o formación'}</span><span style="display:flex;gap:.5rem"><button class="btn sm g" data-a="cvPrint">Imprimir</button><button class="btn sm" data-a="cvDown" data-id="${u.id}">${ic('down')} Descargar</button></span></div>${cvDoc(u)}`;
+  modal('CV · '+esc(full(u)),seg+body,true);
+  const fr=$('#cvframe');if(fr&&f){try{fr.src=URL.createObjectURL(toBlob(f.data))}catch(x){}}},
+ cvTab:id=>{const[uid,t]=String(id).split(':');A.cv(uid,null,t)},
+ cvFileDown:id=>{const f=getFile(id);if(!f)return toast('El archivo ya no está disponible.',1);try{saveFile(f.name,toBlob(f.data),f.type)}catch(e){toast('No se pudo descargar el archivo.',1)}},
+ cvRm:()=>modal('Quitar CV en archivo',`<p>Se eliminará <b style="font-weight:500">${esc(me.cvFile?.name)}</b>. Tu plantilla de CV se mantiene.</p><div class="mf"><button class="btn g" data-a="close">Cancelar</button><button class="btn no" data-a="cvRm2">Quitar archivo</button></div>`),
+ cvRm2:()=>{const fm=$('form[data-form=profile]');if(fm)applyProfile(fm);try{localStorage.removeItem(cvKey(me.id))}catch(e){}delete mem[cvKey(me.id)];delete me.cvFile;me.mod=now();save();close();draw();toast('Archivo quitado')},
+ cvPrint:()=>{try{window.print()}catch(e){toast('La impresión no está disponible aquí. Usa “Descargar” y luego imprime el archivo.',1)}},
+ cvDown:id=>{const u=usr(id);const html='<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>CV '+esc(full(u))+'</title><style>body{margin:24px;background:#fff}'+CVCSS+'@media print{body{margin:0}}</style></head><body>'+cvDoc(u)+'</body></html>';saveFile('CV_'+full(u).normalize('NFD').replace(/[^A-Za-z0-9]+/g,'_')+'.html',html,'text/html')},
+ cvPreview:()=>{const f=$('form[data-form=profile]');if(f){applyProfile(f);me.mod=now();save()}A.cv(me.id)},
+ addRow:sec=>{const f=$('form[data-form=profile]');if(f)applyProfile(f);(me[sec]??=[]).push({});save();draw();const r=document.querySelectorAll('[data-sec="'+sec+'"] .rr');const l=r[r.length-1];l&&l.querySelector('input,select,textarea')?.focus()},
+ rmRow:id=>{const[sec,i]=id.split(':'),f=$('form[data-form=profile]');if(f)applyProfile(f);me[sec].splice(+i,1);save();draw()},
+ cands:id=>{const j=job(id),ap=db.apps.filter(a=>a.jobId===j.id);modal('Postulantes · '+esc(j.title),`<div class="cb"><table><thead><tr><th>Alumno</th><th>Carrera / ciclo</th><th>Contacto</th><th>CV</th><th>Estado</th></tr></thead><tbody>${ap.map(a=>{const u=usr(a.studentId);return `<tr><td style="font-weight:500">${esc(full(u))}</td><td>${esc(u.career)}<br><span class="mu">Ciclo ${esc(u.cycle)}</span></td><td>${esc(u.email)}<br><span class="mu">${esc(u.phone||'')}</span></td><td class="nw">${cvBtn(u.id)}</td><td>${pill(a.status)}</td></tr>`}).join('')}</tbody></table></div><p class="mu" style="margin-top:.8rem">La bolsa laboral actualiza el estado de cada postulación. Para coordinar entrevistas escribe a ${esc(db.cfg.email1)}.</p>`,true)},
+ apply:id=>{const j=job(id);if(stuApplied(id))return toast('Ya postulaste a este aviso');if(db.cfg.rules.needCV&&!cvReady(me)){close();toast('Completa tu CV en “Mi perfil” o sube tu CV en archivo para postular.',1);return go('perfil')}
+  modal('Confirmar postulación',`<p><b style="font-weight:500">${esc(j.title)}</b></p><p class="mu">${esc(co(j.companyId).name)} · ${esc(j.place)}</p><p style="margin-top:.9rem;font-size:.84rem">Se enviarán los datos de tu perfil:</p><p class="mu">${esc(full(me))} · ${esc(me.code)} · ${esc(me.career)} (ciclo ${esc(me.cycle)})</p><p style="margin-top:.6rem"><button class="lk" data-a="cv" data-id="${me.id}">Ver el CV que se enviará</button></p><div class="mf"><button class="btn g" data-a="close">Cancelar</button><button class="btn" data-a="apply2" data-id="${j.id}">Enviar postulación</button></div>`)},
+ apply2:id=>{if(stuApplied(id))return;const j=job(id);db.apps.push({id:nid(db.apps),studentId:me.id,jobId:j.id,status:'Postulado',date:now(),mod:now()});me.mod=now();if(db.cfg.rules.notifyApps)notify(`Nueva postulación de <b>${esc(full(me))}</b> al aviso [${esc(j.title)}]`,['avisos',j.id]);save();close();draw();toast('Postulación enviada')},
+ retire:id=>{db.apps=db.apps.filter(a=>a.id!==+id);save();draw();toast('Postulación retirada')},
+ cfgTab:id=>{cfgTab=id;draw()},
+ rmCar:i=>{const c=db.cfg.careers;if(c.length<=1)return toast('Debe quedar al menos una carrera habilitada.',1);const k=c[+i];if(db.jobs.some(j=>j.career===k&&j.status!=='Finalizada'))return toast('Hay avisos vigentes para “'+k+'”. Finalízalos antes de quitarla.',1);c.splice(+i,1);save();draw();toast('Carrera quitada')},
+ rmLogo:()=>{db.cfg.logo='';save();draw()},
+ apiTog:()=>{db.cfg.api.on=!db.cfg.api.on;save();draw();toast(db.cfg.api.on?'Acceso por API activado':'Acceso por API desactivado')},
+ apiNew:()=>{db.cfg.api.key='scl_live_'+Array.from(crypto.getRandomValues(new Uint8Array(12)),b=>b.toString(16).padStart(2,'0')).join('');save();draw();toast('Nueva clave generada')},
+ doReject:(id,e)=>{const b=e.target.closest('[data-a]');setStatus(b.dataset.k,id,b.dataset.v,$('#why').value.trim())},
+ pubView:id=>{const j=job(id);j.views++;save();const logged=me&&me.role==='student';modal(esc(j.title),jobDetail(j)+`<div class="mf">${logged?(stuApplied(j.id)?pill('Ya postulaste'):`<button class="btn tl" data-a="pubGo" data-id="${j.id}">Postular desde mi cuenta</button>`):`<button class="btn tl" data-a="pubLogin" data-id="${j.id}">Ingresar para postular</button>`}</div>`,true)},
+ pubGo:id=>{close();pendingJob=+id;toAccount()},
+ gohome:()=>{pendingJob=null;toAccount()},
+ qtyp:id=>{F.typ=id||'';F.page=1;draw()},
+ qcar:()=>{F.car=F.car===me.career?'':me.career;draw()},
+ clearF:()=>{F={};draw()},
+ togMine:()=>{F.mine=!F.mine;refresh()},
+ resetAsk:()=>modal('Restablecer datos de prueba',`<p>Se borrarán las empresas, avisos, postulaciones y alumnos creados durante las pruebas, y se cargarán los datos de ejemplo. Las sesiones abiertas se mantienen.</p><div class="mf"><button class="btn g" data-a="close">Cancelar</button><button class="btn no" data-a="resetData">Restablecer datos</button></div>`),
+ resetData:()=>{try{Object.keys(localStorage).filter(k=>k.startsWith(CVPRE)).forEach(k=>localStorage.removeItem(k))}catch(e){}db=normalize(seed());save();close();if(me)me=usr(me.id);if(!me)ss.del(SK);F={};OPEN.clear();tab=me?.role==='company'?'alta':'dash';draw();toast('Datos de prueba restablecidos')},
+ safeHome:()=>{F={};OPEN.clear();bellOpen=false;tab=me?.role==='company'?'alta':'dash';close();draw()}
+};
+function pubLoginModal(){const id=arguments[0];pendingJob=id?+id:null;modal('Ingresar con mi cuenta de alumno',`<p class="mu">Usa el mismo correo y contraseña del campus. Te llevaremos a tu cuenta${pendingJob?' con el aviso listo para postular':''}.</p><form data-form="pubLogin"><label>Correo electrónico</label><input type="email" name="email" required autocomplete="username"><label>Contraseña</label><input type="password" name="password" required autocomplete="current-password"><p id="err" class="err hidden" role="alert"></p><button class="btn w tl">Ingresar</button></form>`)}
+A.pubLogin=id=>pubLoginModal(id);
+function toAccount(){portal='campus';try{history.replaceState(null,'','#campus')}catch(e){}tab='dash';F={};if(pendingJob){tab='avisos';const j=pendingJob;pendingJob=null;draw();A.jview(j)}else draw();window.scrollTo(0,0)}
+
+/* ---------- formularios ---------- */
+const FM={
+ login:d=>{const[u,m]=login(d.email,d.password);if(!u)return err(m);if(u.role==='company')return err('Esta es una cuenta de empresa. Ingresa por el portal de empresas.');withLoad(()=>enter(u))},
+ loginCo:d=>{const[u,m]=login(d.email,d.password);if(!u)return err(m);if(u.role!=='company')return err('Esta cuenta no es de empresa. Ingresa por el portal de alumnos y administración.');withLoad(()=>enter(u))},
+ pubLogin:d=>{const[u,m]=login(d.email,d.password);if(!u)return err(m);if(u.role!=='student')return err('Este acceso es solo para alumnos.');close();me=u;ss.set(SK,String(u.id));withLoad(toAccount)},
+ regStu:d=>{const em=d.email.trim().toLowerCase();if(db.users.some(u=>u.email===em))return err('Ese correo ya está registrado.');if(db.users.some(u=>u.dni===d.dni))return err('Ese DNI ya está registrado.');
+  const n=db.users.filter(u=>u.role==='student').length+1,u={id:nid(db.users),role:'student',first:d.first.trim(),last:d.last.trim(),code:'SCL-'+new Date().getFullYear()+'-'+String(n).padStart(3,'0'),dni:d.dni,email:em,password:d.password,career:d.career,cycle:d.cycle,phone:'',cv:'',about:'',status:'Activo',date:today(),mod:now()};
+  db.users.push(u);save();regMode=false;enter(u);toast('Cuenta creada. Completa tu perfil y carga tu CV para postular.')},
+ regCo:d=>{const em=d.email.trim().toLowerCase();if(db.users.some(u=>u.email===em))return err('Ese correo ya está registrado.');if(db.companies.some(c=>c.ruc===d.ruc))return err('Ya existe una empresa con ese RUC.');
+  const auto=db.cfg.rules.autoCompany,c={id:nid(db.companies),name:d.name.trim(),ruc:d.ruc,sector:d.sector,country:d.country,city:d.city.trim(),address:'',contact:d.contact.trim(),phone:d.phone.trim(),email:em,web:'',status:auto?'Aprobada':'Pendiente',date:today(),mod:now(),note:''};
+  db.companies.push(c);const u={id:nid(db.users),role:'company',email:em,password:d.password,companyId:c.id};db.users.push(u);
+  notify(`Nueva empresa registrada: <b>${esc(c.name)}</b>${auto?'':' (pendiente de aprobación)'}`,['empresas',c.id]);save();regMode=false;enter(u);toast(auto?'Empresa registrada.':'Empresa registrada. Queda pendiente de aprobación.')},
+ jobSave:d=>{const c=co(me.companyId),f={title:d.title.trim(),career:d.career,type:d.type,mode:d.mode,place:d.place.trim(),vacancies:+d.vacancies||1,salary:+d.salary||0,deadline:d.deadline,desc:d.desc.trim(),reqs:d.reqs.trim(),perks:d.perks.trim()};let j;
+  if(d.id){j=job(d.id);Object.assign(j,f,{status:'Pendiente',mod:now(),date:now(),note:''})}else{j={id:nid(db.jobs),companyId:c.id,...f,status:'Pendiente',views:0,date:now(),mod:now(),note:''};db.jobs.push(j)}
+  notify(`<b>${esc(c.name)}</b> ha solicitado la publicación del aviso [${esc(j.title)} – ${esc(city(j))}]`,['avisos',j.id]);save();close();tab='gestor';F={};OPEN.clear();draw();window.scrollTo(0,0);toast('Solicitud enviada. La bolsa laboral revisará tu aviso.')},
+ jobAdmin:d=>{const j=job(d.id);Object.assign(j,{title:d.title.trim(),career:d.career,type:d.type,mode:d.mode,place:d.place.trim(),vacancies:+d.vacancies||1,salary:+d.salary||0,deadline:d.deadline,desc:d.desc.trim(),reqs:d.reqs.trim(),perks:d.perks.trim(),mod:now()});save();close();draw();toast('Aviso actualizado')},
+ coSave:d=>{const c=co(me.companyId),wasRej=c.status==='Rechazada';Object.assign(c,{name:d.name.trim(),ruc:d.ruc.trim(),sector:d.sector,country:d.country,city:d.city.trim(),address:d.address.trim(),contact:d.contact.trim(),phone:d.phone.trim(),mod:now()});
+  if(wasRej){c.status='Pendiente';notify(`<b>${esc(c.name)}</b> actualizó sus datos y solicita una nueva revisión`,['empresas',c.id])}save();draw();toast(wasRej?'Datos enviados a revisión':'Datos guardados')},
+ profile:(d,f)=>{applyProfile(f);Object.keys(PROF_LISTS).forEach(k=>me[k]=fill(me[k]));if(d.password){if(d.password.length<6)return toast('La contraseña debe tener al menos 6 caracteres.',1);me.password=d.password}me.mod=now();save();draw();toast('Perfil guardado')},
+ stuAdmin:d=>{const u=usr(d.id);Object.assign(u,{first:d.first.trim(),last:d.last.trim(),code:d.code.trim(),dni:d.dni.trim(),career:d.career,status:d.status,mod:now()});save();close();draw();toast('Alumno actualizado')},
+ cfgInfo:d=>{Object.assign(db.cfg,{name:d.name.trim(),legal:d.legal.trim(),email1:d.email1.trim(),email2:d.email2.trim(),phone1:d.phone1.trim(),phone2:d.phone2.trim(),phone3:d.phone3.trim(),ruc:d.ruc.trim(),address:d.address.trim(),web:d.web.trim(),desc:d.desc.trim(),mod:now()});save();draw();toast('Cambios guardados')},
+ cfgRules:d=>{db.cfg.rules={needCV:!!d.needCV,notifyApps:!!d.notifyApps,autoCompany:!!d.autoCompany};db.cfg.mod=now();save();draw();toast('Configuración guardada')},
+ addCar:d=>{const k=d.car.trim();if(db.cfg.careers.some(c=>c.toLowerCase()===k.toLowerCase()))return toast('Esa carrera ya está habilitada.',1);db.cfg.careers.push(k);save();draw();toast('Carrera agregada')},
+ cfgSite:d=>{db.cfg.site={public:!!d.public,title:d.title.trim()||'Bolsa Laboral',welcome:d.welcome.trim(),color:d.color};db.cfg.mod=now();save();draw();toast('Micrositio guardado')},
+ cfgGA:d=>{db.cfg.ga=d.ga.trim();save();draw();toast('ID de Google Analytics guardado')}
+};
+
+/* ---------- eventos ---------- */
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-a]');
+ if(bellOpen&&!e.target.closest('.bell')){bellOpen=false;if(!b||!A[b.dataset.a]){draw();return}}
+ if(!b||!A[b.dataset.a])return;
+ if(b.tagName==='INPUT'&&b.type==='checkbox'){A[b.dataset.a](b.dataset.id,e);return}
+ if(b.dataset.a==='bd'&&!e.target.classList.contains('mb'))return;
+ A[b.dataset.a](b.dataset.id,e)});
+document.addEventListener('submit',e=>{const k=e.target.dataset.form;if(!k||!FM[k])return;e.preventDefault();const fd=new FormData(e.target),d={};for(const[key,v]of fd.entries())d[key]=v;FM[k](d,e.target)});
+document.addEventListener('input',e=>{const k=e.target.dataset?.f;if(!k||e.target.tagName==='SELECT')return;F[k]=e.target.value;F.page=1;refresh()});
+document.addEventListener('change',e=>{const t=e.target;
+ if(t.dataset?.f&&t.tagName==='SELECT'){F[t.dataset.f]=t.value;F.page=1;refresh();return}
+ if(t.dataset?.f&&t.type==='date'){F[t.dataset.f]=t.value;F.page=1;refresh();return}
+ if(t.dataset?.ch){const k=t.dataset.ch,id=t.dataset.id,v=t.value;if(v==='Rechazada'&&(k==='co'||k==='job')){askReject(k,id,v);t.value=(k==='co'?co(id):job(id)).status;t.className='pill '+CL[t.value]}else setStatus(k,id,v);return}
+ if(t.dataset?.up==='cvfile'&&t.files[0]){const f=t.files[0];t.value='';
+  if(!/\.(pdf|docx|jpe?g|png)$/i.test(f.name))return toast('Sube un archivo PDF, Word (.docx) o imagen JPG/PNG.',1);
+  if(f.size>1.5*1048576)return toast('El archivo pesa '+kb(f.size)+'. El máximo es 1.5 MB.',1);
+  const r=new FileReader();r.onerror=()=>toast('No se pudo leer el archivo.',1);
+  r.onload=()=>{const fm=$('form[data-form=profile]');if(fm)applyProfile(fm);const rec={name:f.name,type:f.type||'',size:f.size,date:now(),data:r.result};
+   try{localStorage.setItem(cvKey(me.id),JSON.stringify(rec))}catch(e){return toast('No hay espacio en este navegador para guardar el archivo. Prueba con uno más liviano.',1)}
+   me.cvFile={name:rec.name,type:rec.type,size:rec.size,date:rec.date};me.mod=now();save();draw();toast('CV subido')};
+  r.readAsDataURL(f);return}
+ if(t.dataset?.up==='logo'&&t.files[0]){const f=t.files[0];if(f.size>600000)return toast('El logo debe pesar menos de 600 KB.',1);const r=new FileReader();r.onload=()=>{db.cfg.logo=r.result;db.cfg.mod=now();save();draw();toast('Logo actualizado')};r.readAsDataURL(f)}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if($('#modal').innerHTML)close();else if(bellOpen){bellOpen=false;draw()}}});
+window.addEventListener('storage',e=>{if(e.key!==KEY||!e.newValue)return;try{db=normalize(JSON.parse(e.newValue))}catch(x){return}
+ if(me){me=usr(me.id)||null;if(!me)ss.del(SK)}
+ const a=document.activeElement;if($('#modal').innerHTML||(a&&a.closest&&a.closest('form')&&/INPUT|TEXTAREA|SELECT/.test(a.tagName)))return toast('Hay cambios nuevos de otro usuario; se verán al continuar.');
+ draw()});
+window.addEventListener('hashchange',()=>{route();me=session();F={};tab=me&&me.role==='company'?'alta':'dash';draw()});
+
+/* ---------- arranque ---------- */
+route(true);
+me=session();if(me){const t=ss.get('scl_tab');tab=t&&V[me.role][t]?t:(me.role==='company'?'alta':'dash');try{F=JSON.parse(ss.get('scl_F'))||{}}catch(e){F={}}}
+draw();
+</script>
+</body>
+</html>
